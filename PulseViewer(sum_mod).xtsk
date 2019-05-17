@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <ShellCommand Timeout="30000" Command="run" PauseAfter="200" Mode="show maximized" Object="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Paint.lnk" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="1"/>
+  <ShellCommand Timeout="30000" Command="run" PauseAfter="200" Mode="show maximized" Object="E:\Disk.Yandex\1.Работа\PulseViewer\PV(2.32)\PulseViewer.exe" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="2"/>
+  <Dialog DialogCaption="Переменные параметры" DialogText="Введение ряда переменных параметров" DefaultOkButton="idOK" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="3">
+    <Field Id="idField1" Caption="Начало диапазона шумов" DefaultValue="0" Variable="{noise_start}" Type="Integer"/>
+    <Field Id="idField2" Caption="Конец диапазона шумов" DefaultValue="50" Variable="{noise_end}" Type="Integer"/>
+    <Field Id="idField3" Caption="Переместить файлы и закрыть программу?" DefaultValue="True" Variable="{move_file}" Type="Checkbox"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <SetVariable Variable="{path}" Value="E:\Disk.Yandex\1.Работа\Результаты обработки на разбор\0.Разобрать\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="4"/>
+  <SetVariable Variable="{path_data}" Value="J:\Data_pulsar\0.for processing\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="5"/>
+  <SetVariable Variable="{path_data_processed}" Value="J:\Data_pulsar\0.processed\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="6"/>
+  <SearchUI Command="{MKEY LEFT,DBLCLICK}{noise_start}" PauseAfter="1000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="8">
+    <Object>
+      <ObjectSearchInfo Name="_TEXT_{B1078B73-BC7B-46B7-B82B-3AFAD683D216}">
+        <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+          <RootRect Left="0" Top="0" Right="906" Bottom="765"/>
+          <Childs Count="4"/>
+        </Object>
+        <Object Role="CLIENT" State="FOCUSABLE">
+          <RootRect Left="8" Top="50" Right="898" Bottom="757"/>
+          <Neigbours>
+            <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+              <RootRect Left="8" Top="30" Right="898" Bottom="49"/>
+            </Top>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+          <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="PAGETABLIST">
+          <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+          <Childs Count="8"/>
+        </Object>
+        <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+          <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+          <Neigbours>
+            <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+              <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+            </Top>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="CLIENT">
+          <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+          <Childs Count="14"/>
+        </Object>
+        <Object Class="TGroupBox" Name="шум" Role="WINDOW" Text="шум">
+          <RootRect Left="252" Top="82" Right="413" Bottom="251"/>
+          <Neigbours>
+            <Left Module="" ModuleSize="0" Class="Edit" Name="" Role="WINDOW" Text="">
+              <RootRect Left="15" Top="85" Right="232" Bottom="246"/>
+            </Left>
+            <Right Module="" ModuleSize="0" Class="TGroupBox" Name="Чистка" Role="WINDOW" Text="Чистка">
+              <RootRect Left="419" Top="82" Right="662" Bottom="251"/>
+            </Right>
+            <Bottom Module="" ModuleSize="0" Class="TChart" Name="" Role="WINDOW" Text="">
+              <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+            </Bottom>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="CLIENT">
+          <RootRect Left="252" Top="82" Right="413" Bottom="251"/>
+          <Childs Count="4"/>
+        </Object>
+        <Object Class="Edit" Name="10" Role="WINDOW" Text="10">
+          <RootRect Left="264" Top="117" Right="313" Bottom="138"/>
+          <Neigbours>
+            <Right Module="" ModuleSize="0" Class="TUpDown" Name="" Role="WINDOW" Text="">
+              <RootRect Left="313" Top="117" Right="328" Bottom="138"/>
+            </Right>
+            <Bottom Module="" ModuleSize="0" Class="Edit" Name="100" Role="WINDOW" Text="100">
+              <RootRect Left="264" Top="157" Right="313" Bottom="178"/>
+            </Bottom>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Name="" Role="TEXT" Value="10">
+          <InnerPoint X="13" Y="5"/>
+          <RootRect Left="266" Top="119" Right="311" Bottom="136"/>
+          <Image>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</Image>
+        </Object>
+      </ObjectSearchInfo>
+    </Object>
+  </SearchUI>
+  <SearchUI Command="{MKEY LEFT,DBLCLICK}{noise_end}" PauseAfter="1000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="9">
+    <Object>
+      <ObjectSearchInfo Name="_TEXT_{D083F76A-ADFE-40B5-A260-25318A21CEBC}">
+        <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+          <RootRect Left="0" Top="0" Right="906" Bottom="765"/>
+          <Childs Count="4"/>
+        </Object>
+        <Object Role="CLIENT" State="FOCUSABLE">
+          <RootRect Left="8" Top="50" Right="898" Bottom="757"/>
+          <Neigbours>
+            <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+              <RootRect Left="8" Top="30" Right="898" Bottom="49"/>
+            </Top>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+          <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="PAGETABLIST">
+          <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+          <Childs Count="8"/>
+        </Object>
+        <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+          <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+          <Neigbours>
+            <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+              <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+            </Top>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="CLIENT">
+          <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+          <Childs Count="14"/>
+        </Object>
+        <Object Class="TGroupBox" Name="шум" Role="WINDOW" Text="шум">
+          <RootRect Left="252" Top="82" Right="413" Bottom="251"/>
+          <Neigbours>
+            <Left Module="" ModuleSize="0" Class="Edit" Name="" Role="WINDOW" Text="">
+              <RootRect Left="15" Top="85" Right="232" Bottom="246"/>
+            </Left>
+            <Right Module="" ModuleSize="0" Class="TGroupBox" Name="Чистка" Role="WINDOW" Text="Чистка">
+              <RootRect Left="419" Top="82" Right="662" Bottom="251"/>
+            </Right>
+            <Bottom Module="" ModuleSize="0" Class="TChart" Name="" Role="WINDOW" Text="">
+              <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+            </Bottom>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Role="CLIENT">
+          <RootRect Left="252" Top="82" Right="413" Bottom="251"/>
+          <Childs Count="4"/>
+        </Object>
+        <Object Class="Edit" Name="100" Role="WINDOW" Text="100">
+          <RootRect Left="264" Top="157" Right="313" Bottom="178"/>
+          <Neigbours>
+            <Top Module="" ModuleSize="0" Class="Edit" Name="10" Role="WINDOW" Text="10">
+              <RootRect Left="264" Top="117" Right="313" Bottom="138"/>
+            </Top>
+            <Right Module="" ModuleSize="0" Class="TUpDown" Name="" Role="WINDOW" Text="">
+              <RootRect Left="313" Top="157" Right="328" Bottom="178"/>
+            </Right>
+          </Neigbours>
+          <Childs Count="1"/>
+        </Object>
+        <Object Name="" Role="TEXT" Value="100">
+          <InnerPoint X="29" Y="6"/>
+          <RootRect Left="266" Top="159" Right="311" Bottom="176"/>
+          <Image>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
+YII=</Image>
+        </Object>
+      </ObjectSearchInfo>
+    </Object>
+  </SearchUI>
+  <Loop Variable="{LoopFileName}" Items="{FileList({path_data}*)}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="10">
+    <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseAfter="1000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="11">
+      <Object>
+        <ObjectSearchInfo Name="Открыть файл данных_PUSHBUTTON_{03EDA1B1-E634-4829-9CB7-DFCE78DAE63C}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+            <RootRect Left="0" Top="0" Right="1382" Bottom="754"/>
+            <Childs Count="4"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="8" Top="50" Right="1374" Bottom="746"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+                <RootRect Left="8" Top="30" Right="1374" Bottom="49"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PAGETABLIST">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="8"/>
+          </Object>
+          <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+                <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Childs Count="14"/>
+          </Object>
+          <Object Class="Button" Name="Открыть файл данных" Role="WINDOW" Text="Открыть файл данных">
+            <RootRect Left="483" Top="254" Right="662" Bottom="279"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="TGroupBox" Name="Графики" Role="WINDOW" Text="Графики">
+                <RootRect Left="20" Top="250" Right="477" Bottom="315"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="TGroupBox" Name="Чистка" Role="WINDOW" Text="Чистка">
+                <RootRect Left="419" Top="82" Right="662" Bottom="251"/>
+              </Top>
+              <Right Module="" ModuleSize="0" Class="TGroupBox" Name="Сглаживание" Role="WINDOW" Text="Сглаживание">
+                <RootRect Left="668" Top="242" Right="885" Bottom="299"/>
+              </Right>
+              <Bottom Module="" ModuleSize="0" Class="ComboBox" Name="время" Role="WINDOW" Text="время">
+                <RootRect Left="588" Top="286" Right="661" Bottom="307"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PUSHBUTTON" DefaultAction="Нажать">
+            <InnerPoint X="58" Y="16"/>
+            <RootRect Left="483" Top="254" Right="662" Bottom="279"/>
+            <Image>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</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}{CTRL}A{/CTRL}{DEL}{LoopFileName}{ENTER}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="12">
+      <Object>
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{746EC896-1B74-4F76-9A7F-8375962168F4}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="#32770" Name="Открыть" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Открыть">
+            <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="DIALOG" State="FOCUSABLE" DefaultAction="Открыть">
+            <RootRect Left="8" Top="30" Right="675" Bottom="472"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Открыть" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="24" Top="3" Right="675" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="7"/>
+          </Object>
+          <Object Class="ComboBoxEx32" Name="Имя файла:" Role="WINDOW" Text="160315_1237+25_00" ShortCut="Alt+и">
+            <RootRect Left="208" Top="405" Right="658" Bottom="429"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="Static" Name="Имя файла:" Role="WINDOW" Text="&amp;Имя файла:" ShortCut="Alt+и">
+                <RootRect Left="138" Top="409" Right="203" Bottom="424"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="DUIViewWndClassName" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="65" Right="675" Bottom="396"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="Button" Name="" Role="WINDOW" Text="&amp;Открыть" ShortCut="Alt+о">
+                <RootRect Left="470" Top="434" Right="558" Bottom="460"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT" ShortCut="Alt+и">
+            <RootRect Left="208" Top="405" Right="658" Bottom="429"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="ComboBox" Role="WINDOW" Text="" ShortCut="Alt+и">
+            <RootRect Left="208" Top="405" Right="658" Bottom="429"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="COMBOBOX" State="COLLAPSED;FOCUSABLE" ShortCut="Alt+и">
+            <RootRect Left="208" Top="405" Right="658" Bottom="429"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Class="Edit" Role="WINDOW" State="FOCUSED;FOCUSABLE" Text="160315_1237+25_00" ShortCut="Alt+и">
+            <RootRect Left="212" Top="410" Right="638" Bottom="425"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="" Name="Открыть" Role="PUSHBUTTON" DefaultAction="Открыть" ShortCut="Alt+Стрелка вниз" ParentId="2">
+                <RootRect Left="642" Top="406" Right="657" Bottom="428"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="TEXT" Value="160315_1237+25_00" ShortCut="Alt+и">
+            <InnerPoint X="162" Y="9"/>
+            <RootRect Left="212" Top="410" Right="638" Bottom="425"/>
+            <Image>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
+AM7uk+xx8l8hAAAAAElFTkSuQmCC</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <Pause PauseBefore="1000"/>
+    <SearchUI Timeout="600000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="14">
+      <Object>
+        <ObjectSearchInfo Name="Компенсировать все_PUSHBUTTON_{82018C99-DE5C-40B0-91CD-BDBACC757AAB}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+            <RootRect Left="0" Top="0" Right="1382" Bottom="754"/>
+            <Childs Count="4"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="8" Top="50" Right="1374" Bottom="746"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+                <RootRect Left="8" Top="30" Right="1374" Bottom="49"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PAGETABLIST">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="8"/>
+          </Object>
+          <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+                <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Childs Count="14"/>
+          </Object>
+          <Object Class="TGroupBox" Name="Компенсация дисперсии" Role="WINDOW" Text="Компенсация дисперсии">
+            <RootRect Left="260" Top="614" Right="885" Bottom="735"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="TGroupBox" Name="Вычисление задержки между каналами" Role="WINDOW" Text="Вычисление задержки между каналами">
+                <RootRect Left="20" Top="614" Right="245" Bottom="735"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="TChart" Name="" Role="WINDOW" Text="">
+                <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="260" Top="614" Right="885" Bottom="735"/>
+            <Childs Count="15"/>
+          </Object>
+          <Object Class="Button" Name="Компенсировать все" Role="WINDOW" Text="Компенсировать все">
+            <RootRect Left="388" Top="661" Right="581" Bottom="686"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="TUpDown" Name="" Role="WINDOW" Text="">
+                <RootRect Left="355" Top="651" Right="370" Bottom="672"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="Button" Name="Компенсировать текущий импульс" Role="WINDOW" Text="Компенсировать текущий импульс">
+                <RootRect Left="388" Top="630" Right="581" Bottom="655"/>
+              </Top>
+              <Right Module="" ModuleSize="0" Class="Button" Name="Использовать МД" Role="WINDOW" Text="Использовать МД">
+                <RootRect Left="596" Top="654" Right="725" Bottom="671"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PUSHBUTTON" DefaultAction="Нажать">
+            <InnerPoint X="146" Y="12"/>
+            <RootRect Left="388" Top="661" Right="581" Bottom="686"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAALwUlEQVR42u2dTWwV1xXH79gStFBK
+0hDqKIgiLIxVaAuP0l2VBXJTiZUXrPEOjFTCBkv1sq7simSBouAGKUjeszCbSK0t3C0UZBtUC7DD
+KwnEwoDAhmLH72Om5577MXc+3rMx9pvH4fwR7827c+feM+d3z5nh5Z2J97u+0aHOnSJU/u9/OC6+
+NG3Dp975+vDs2TZ3EzaODKjOeLTAI07fyandOMDp9jvffHxSHHeGqjZ2hbmaU0bGw83W3dgQrLi8
+josx/0QhwKfcndMa66e7I4vB9FSAhz7+Z/hxUPzy9JDms2zAyblSRo4ChpbcYLu0KjyY5cqbnZ2N
+tuRjVKTn/vxv2Ki4FKzfVcOX4njo9ARgNZZSWvaIzJVPjBwDvFOE+SRhH0ukAWaREgMmLgZMXAyY
+uBgwcTFg4mLAxMWAiYsBExcDJi4GTFwMmLgYMHExYOLyBgYGsraBtYbiCCYuBkxcDJi4GDBxMWDi
+YsDExYCJiwETF3/RQVxeEARZ28BaQ3GKJi4GTFwMmLgYMHExYOJiwMTFgImLARMXAyYu/iYrM504
+caKvr2+tZ/Hu37+f9Zm+jbp8+fLVq1drAZhTdCa6dOnSqwKGQ5bsc/To0bm5ObeFAWejlQGGQ6p0
+6O7u3rZtGwOuC60YcH9/f6UODx48YMD1IgZMXAx4Rcr3t+Umu2bPirp/hCUDXqH0gw0P9o4On9j5
+2qOtnRgwcdUIcL7fuzg72yYzW/c124pP9XTaMBzuhs8Q1m3nxbFj4nxqoAwnOkO3cET8LPrbzOHY
+HWY9OaUyrH6g8JmWi+2DZ7BP3nRObpi+EXtUi7UttXOuew8+vlTaNdiuWq5FbP7jP2L2KLNtt4pO
+CM+/0hNSawdYKMdaK11fWGvtBc3dm+wZU6SDM4pqN66JPPLZfSY1bFjDqgFGb0Z8bVpSALudB4Vo
+Pz+86/O2MxOw4aKy/WP2qOXgGpAC2NwIVL0DqF2KPig6ukZbzoSL1zgmH12qSajRuE9ZqpU7y+5m
+0ujlUjtS3yU19y8J+O6ptqnDGOjhijEtCcCxzl2wObinvavFPTx6mlF72kQK4JgTmpda99kAjpCY
+ROSQtgzp1KiN80us2urhrlt2ff7OEeEsDvToRXEE/ZlfCnDX5LGpkzKV2mByW2KAk51h9lPirMoT
+6YCj9ggn+Scj2LpuzQAfOnSoep8UwCkpOmqlvkS9JmDMjS7ISCiEE+hYFyqsqwOG0Om4GKZNFUxu
+iws42Tl2IhUAR+xxT7QS4MidxGoC3rx583K6xQEnbrJ0yrT3CQc7OsREy/klUnTav0tSvWy7x12j
+b3kih8UTuxDu4daNIeBoS2TqROdlAo6F85GJXjexRVJ0ytVtFW+yVqb6+2dS7AY4qSVv7mpsz4r0
+9gIerrMvodbInrcX8FsiBkxcDJi4GDBxMWDiqh1grvDPSjUC3NnZmfWZvr3iFM16XTHgN0b8u2ji
+4t9FE9cKf9HBgN8UMWDiWiFgLh/NSq9aPrpCwFw+molWUD7KKfpNUu1+NsuAMxEDJi4GTFxcm0Rc
+tftdNAPORLX7XTQDzkT8iw7iqh1g+bJUeWe8Og+P7OjtnRhMFnBO7hEDAziK/lF/OGy8LDWt7dVL
+VdMGjBdwNkdPrQ4qw2sYwaO9pggsvbzTAezWy1aoybRVRroW6fDXpiQprNxZ3VLVlG5RO5OVq3WA
+uOaAY+XPTnmnVjKMKhdwmmozp4JbuHWLq1qqmiyREpVrohJHZ6UsAKeXd1YozxJVajKXAry6parJ
+XbECzrqJWleZpOgK5Z2icoquUpOpa7bCYdNT9OuXqqbsihVwJipX60C1B+zeZKWVdyb6yJus7mQB
+p02GHWE1aMWbrNUoVU3dFSvgbE67BGSqN/OfSXWZDOtTDJi43kzArGWLARMXPy+auPh50cTF/8Gf
+uGoHmMtHs1KNAHP5aIbiFM0KxYCJiwETFwMmLgZMXPy7aOLi30UTF/8umpUiBkxcDJi4GDBxMWDi
+YsDExYCJiwETFwMmLgZMXAyYuBgwcTFg4mLAxMWAiYsBExcDJi4GTFwMmLgYMHExYOJiwMTFgImL
+ARMXAyYuBkxcDJi4GDBxMWDiYsDExYCJiwETFwMmLgZMXAyYuBgwcTFg4mLAxMWAiYsBExc/EJy4
+vCAIsraBtYbiFE1cDJi4+BpMXPw/5SAuTtHExYCJiwETFwMmLgZMXAyYuBgwcXk7frFDvum/6kXv
+EiL8mjowfyt/c+2ZHsHc8+c/LCz4y/uWG6f2Kn40lql2baN6s/vMB3hZt27dhg0b1K4qlniVjPG8
+Cp/0bLbF03+cfo490PKj9es3Wkt8/9nz5/MLC2nf/KfZ4gnP3eultsXfbFfPcYr32aefec4kjkM9
+g1O/BIZ34LwmDA1GRv61ffv2zs7jTU1NjY2NlbgGOKCUH0gPBEa+j224IYRfLks82ALb2NV3O4KU
+MbD3xYsXw0PDD2ce7t27FxpHRkbQks4lLBHWFHlOckDHAGc6PzCm+H7ZtVbvDfT6hm20ZGhmZuY3
+aMnQyMjvP/roT598sn79elFVQczlIjTMItAtJt7MRx2D1gw1nJfbl1OAvRCsjgbbWQ8qwkMNY3tE
+CHjq7jcXLlzY3do6//KluyLRLRJG2S9rYMplQVAqFUulkkK4WCjAa7EoW8q+X1hchA6FYtGHTsVi
+GR0Pe+Bg6IBHqBUgp35/61b4eO7cuaatP4fPk/m7F776qrW19eX8fLiC8Qygm4csXTyyvSSFy8Yv
+SEt8OSnYhh+hQxHNA1MkY19ajvaXYNBSuaycBLa8h5Z88cW57U1NMOGNqan709Ozz55pWIH0HG55
+usULkSiU8C4XdKCtBQNhWmUkTCTQVB9PH/sGuCF9q07HLjWvdddukQ44zMsGsJ44EsQ6HdgsENz7
+7tsrV67MPZ8Dao2NDW5CAyN0XKJUQEjry9Kx8F4ql5RDF5Er7CoUrZflH1/S9IsKcBEBq6FwrIYG
+r2X37r/09Gx592cw6b3730lL5uZgcBvBykqc3dfx6es04BtT8E2aAlPKFSakIwsFgOqXcKmZRVBG
+LwewHqW12pIAxmpoaGje1QKWfLhlC7RMfHvvfwsL9/L5MDpNsraYLVvNxi47QCvPUpkp51RuVHR9
+RV1I3gECFjbtqQjesX2HQRQgJU03vDK484akPdPoOYylph9Oj4+P3759G/bDeXqezQdqTclAlnGM
+/rCWFYsFtBwCZVGSBnoQxDpWJGCJGU5Gnpb0q/Q1YAbXlzCqhfbFvtz+np6ezZs2SUtmZqQlt27B
+dgOsNfcqGkS44gZYIpd/EaMT2nSwwjQSOVgCk+Kr/CDXlo8LQflcLUcVjhhTwd59+//a0/P+T+X/
+ruzO9Pfziz9MSp+EbG2ouHnSD5NxoFwEJmMKUXGsp8PzLgV6auSu8iKuCdnBzONt++BDC0fHsRdu
+K/DGDsPYoA1sR+d2Z+bxzNj42M0bN6FXY0OjXCsovVSVKQhYXel0uMgsXVaZELFi0vbRyz44vQB9
+Cxgo8hxgBchzgjMUQF2Yazn83X8g19vbu2njRpjs0ZMnY+PjN2+Mw3RoiZY+ExdwgNddtMRmaZmi
+JdGiuiKASTJtFIpwZBEtCdDZ6HSZS3HBCT/Q6/hXuf1gyXs/2QSN+ZmH84XFW/+Z0Bc6bYIXhJHr
+4WXG05dCfPN1CAQlXHngIkRYVtcmfYXC10BnbHWbEqZokPfB1iYRvcmKXJINYBFyjWyEfXVkiMdP
+H42Ojl2/fk3GjSdjWMWNnEw6V9jsDDbBnpK8mPmYAKV74RqM3ixI3uUSXvlkfPvygifTEWLwcV/R
+1ydj7pJEcOC3B/r6+jb+eAM0Pn76dGxs7Po1tASlI1hbom6RlHcws2F8wLA4PKytRTk1xjHsKi4W
+YHx5XUDseCLlslmeOqPiopd3aUL8+kCur+9v727YCCP/98mjhcLizdEx8IcIk7OJk8CNGR1GGJRy
+IDWJJmqvC77OInhhVnlErXlcZHLRa0D/BwSTxtEqjyX6AAAAAElFTkSuQmCC</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <Pause PauseBefore="1000"/>
+    <SearchUI Timeout="600000" Command="{MKEY RIGHT,CLICK}" PauseBefore="200" PauseAfter="200" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="16">
+      <Object>
+        <ObjectSearchInfo Name="_CLIENT_{5A4CF447-DA74-47AE-AB94-02AECB8256FB}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+            <RootRect Left="0" Top="0" Right="1382" Bottom="754"/>
+            <Childs Count="4"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="8" Top="50" Right="1374" Bottom="746"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+                <RootRect Left="8" Top="30" Right="1374" Bottom="49"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PAGETABLIST">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="8"/>
+          </Object>
+          <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+                <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Childs Count="14"/>
+          </Object>
+          <Object Class="TChart" Name="" Role="WINDOW" Text="">
+            <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="TGroupBox" Name="Графики" Role="WINDOW" Text="Графики">
+                <RootRect Left="20" Top="250" Right="477" Bottom="315"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="TGroupBox" Name="Компенсация дисперсии" Role="WINDOW" Text="Компенсация дисперсии">
+                <RootRect Left="260" Top="614" Right="885" Bottom="735"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <InnerPoint X="633" Y="105"/>
+            <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAADlElEQVR42u2ba5LaMBAGxQnCUbnB
+khtwVHKDuOJE5Sy2GbD8mKb7B0tpsaRPjTxmF5/u93sRLicFs1EwHAXDUTAcBcNRMBwFw1EwnNPe
+E5B1SbmDb7fb5XLZexY5gigYHkTB8CApBUscBcNRMJyUgq3BcRQMD6JgeJDT9XrtftRhuiH7J7Yw
+WlLuYImjYDgpBVuD4ygYHkTB8CApBUscBcNRMJyUgq3BcRQMD6JgeJCUgiWOguEoGE5KwdbgOAqG
+B1EwPEhKwRJHwXAUDCelYGtwHAXDgygYHiSlYImjYDgKhuOtK/CWlDvYi6w4CoYHSSlY4igYjoLh
+pBRsDY6jYHgQBcODpBQscRQMR8FwUgq2BsdRMDyIguFBUgqWOAqGo2A4KQVbg+MoGB5EwfAgKQVL
+HAXDUTCclIKtwXEUDA+iYHgQb12Bt6TcwRJHwXBSCrYGx1EwPIiC4UFSCpY4CoajYDgpBVuD4ygY
+HkTB8CApBUscBcNRMJyUgq3BcRQMD6JgeJCUgiWOguEoGE5KwdbgOAqGB1EwPEhKwRJHwXC8swHe
+knIHW4PjKBgeRMHwICkFSxwFw1EwnJSCrcFxFAwPomB4kJSCJY6C4SgYTkrB1uA4CoYHUTA8SErB
+EkfBcBQMJ6Vga3AcBcODKBgeJKVgiaNgOAqGk1KwNTiOguFBvHXlKC0/zuefK7hIuYORdIJ/reBC
+wUdBwWQ6u92jgv/Cu8hS8Pi67EiTM+pKgodzU/CbKBhO22siBR8OBcNpKLjvqnmH/fOUgmE1WMHj
+67LvHBS8IgqOzy2l4CNgDQYyXDgFc6jrpeCN2LgGTwkuiz+5WoPn1mWz4YaCyz+prQR/Xa+P755W
+Ey4KjqBgOK0EjyocPf+3mnBRcIRPFLzS90t256mDouANGF58tu15Y8HHrcEHEVxaf81ltM/a+FmC
+X43XkKDgqSWbWcrlguc7V/DLMV5a0Pn2srngsloNrnP7UMFTkx/tcxvBpZ3j/wS/d+vK15+j6mz6
+19SzTbyfJS39cPWOj8fXTM2nzz96VHdI114PrP1Uwf1v+8e+8dsM5+dTF+1biuHoy9dnONCii6zH
+d/o2ezr4J9w1dvBwHz/dkU/HHdbghgvY5hSt4JcEj/Y8JXjhSir4PK9nVHAZq76PnQAFr3Ed+Ooc
+5kPGD9xYcJm4yPpEwVNL01DwVJCNBb/3CWXqf9U5BE99PFXwVD+1h99gJ6pJSyIX3wAAAABJRU5E
+rkJggg==</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="300000" Command="{MKEY LEFT,CLICK}" PauseBefore="1200" PauseAfter="1300" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="17">
+      <Object>
+        <ObjectSearchInfo Name="копировать в буфер_MENUITEM_{5FE215EF-1551-4CF8-A249-F8AE2E729C93}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="#32768" Name="Контекст" Role="WINDOW" State="FOCUSABLE">
+            <RootRect Left="0" Top="0" Right="201" Bottom="28"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="MENUPOPUP">
+            <RootRect Left="3" Top="3" Right="198" Bottom="25"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Name="копировать в буфер" Role="MENUITEM" State="FOCUSED;HOTTRACKED" DefaultAction="Выполнить" ShortCut="к" ParentId="1">
+            <InnerPoint X="51" Y="17"/>
+            <RootRect Left="3" Top="3" Right="198" Bottom="25"/>
+            <Image>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
+UfR/JfAL9hKWLS0AAAAASUVORK5CYII=</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="300000" Command="{CTRL}v{/CTRL}" PauseBefore="2000" PauseAfter="200" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="18">
+      <Object>
+        <ObjectSearchInfo Name="_CLIENT_{F3475F16-6BAB-487D-A094-7D0851C156E3}">
+          <Object Class="MSPaintApp" Name="Безымянный - Paint" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Безымянный - Paint">
+            <RootRect Left="0" Top="0" Right="1382" Bottom="754"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="8" Top="0" Right="1374" Bottom="746"/>
+            <Childs Count="6"/>
+          </Object>
+          <Object Class="MSPaintView" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="171" Right="1374" Bottom="720"/>
+            <Neigbours>
+              <Top Class="UIRibbonCommandBarDock" Name="UIRibbonDockTop" Role="WINDOW" Text="UIRibbonDockTop">
+                <RootRect Left="8" Top="30" Right="1374" Bottom="171"/>
+              </Top>
+              <Bottom Class="msctls_statusbar32" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="720" Right="1374" Bottom="746"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="8" Top="171" Right="1374" Bottom="720"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="Afx:00000000FFEB0000:8" Role="WINDOW" State="FOCUSED;FOCUSABLE">
+            <RootRect Left="8" Top="171" Right="1374" Bottom="720"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <InnerPoint X="73" Y="48"/>
+            <RootRect Left="8" Top="171" Right="1374" Bottom="720"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAKUElEQVR42u3dCWxT9x3A8Xf6JBcQ
+SAIk4QhnAmVAIKMc6rGUAmtXhDi0bh2FVdEQlLbSJk2qRrUyJq6VSW3X0W7ttk506roJ2q2sFAiM
+IxxxQsKRgziGkMSOHduJ7efnd+xvwiABP3ihAcc/fl+i6Pl4/v///uQ92wQJWlVV6raa/VIwKFIP
+NMdXu0prr2+nFi5ZNC2NouxH3vnKe307mu/03/eUeW7sklu8+tFRXZvtZ3d/WuG5eSV5tEpqNFVb
+7735aLGH637rzTnkPfH9J3K7rqlMW7JodOPeL6k5yx7xdV2M3j/WiNdvurn9/wccnZtX702LMY37
+Hh0b2CcFQw8YOEZe296/XspZ8VxBao+ruz+VWum5z0NRvwXuOli1Dj4E1lu/Bcb6ptjAV31SvCeG
+9U2xgcvr2uI9Maxvig38x88Ox3tiWN8UG9juDMZ7YljfhMDAQ2DgITDwEBh4eoFbyzxNVYG7Ppwj
+fO7ZkmKtW1+xCSOM1IYJJrL9paPD7gu3dgoDeXpMCl88Jp2maZ2TJnM+V+MIBAVJVjiWtlrMk8bl
+kOuPnTofkeS5s/K1duyTVSRWeoEPffLfxqrGpJT0kjcWkKdVUhVZVhQqunMkHP1bkb0f2Fob6s2Z
+xqUlS7QGW2+TzDyTpAp17cLgJDPLcRRLh8VIJNApuFp++diYjCTzXWfc7u2obbhqNPAGA88yZP6U
+IIiBkEAWYjGbhLBYNH2C1r59sorESi9w9T8vZ04LHNp9ed2vFjPXjrRr+5G9FVWhFJb9w5ZDM55M
+2ffnmuU/+67WYOsqlbRkiyBGDEaDlaPIw4RUqlOiRFFRRVG+fO71R3PvbEx07Q6nxWIkhzvHMgz5
+ohly5BOmcDhi4LkWV/sdgPtkFYmVXuCznzSyA8SL5+3LXpsb84H2fGAzegbafbYX3liqNdiacpUy
+m1WKJrosQ/nb2tRwiOF4LmmgkVYZKSxdufjW05O0ztVkqrbqBovJQLYVVRVC4YgskzunpQygKZoY
+ky9Pe8fswolaE+i+incu/dolOG/clG4aUjLqp3pWkVjpBS7/S6MhWaipcazbtJhhos/1tchG9AxH
+s/z7Ww9xzhS7r+LFTcu0BltRJjNWa6qB5hnK6+34llVcmMUfaQ79x+ETrBlJrDJEdE9NUZZPHh5z
+94rqSxzLEkUiKUoSz3GZQwc6mpwszSQnW8haJElyerzzZk3WmkCfrCKx0gt86sMGQ6pQX3flDkcw
+1Wxt9Ff+ePNKrcEIsNlKXoWpiKIKikqHAoVJ0voJ1j/V+L5whNyyNUkJ5Bk6Nj+eF3P3sjMXGYaR
+ZZl853h2av7ok7YaMn+TwcCw5KiPHvdun3/uzAKtCXRfBTmCP9+4b8PiFfyYDEtO9NeK09Nm61nF
+jUYOtd5+ZUPr3d/EPcj0Ah/fVW9MC9vtTeTViyKvWNGfejV61lQUssnyhve3lMqXTeSpKdn6vNZg
+r31d7732D0XUa3/IidbIUG8vzO+MKKsPtLhEExURRhk7fv/0uJi7nyyvESMSkTTyhonjss1mw8Fj
+lTfO5tcORYq8IM8r0jyCb1nFx+/tmJ/hqWpVjaxn9g/e0rmKGyWb+duv9IciD5jwzukFPvpuHZss
+XG1unvNswdTC7C7iLmfydba8+XRpY/gS5whUrd3+w95Owh9R1pS6W30KLYXzUqT3ikfFvFvZGQIc
+/fkwGY0E2GI29nagW1ZRfvKEy7ZnwaKCC2Wna+tqMufs/Car6J/pBT7xu3pfp58zKoGOkCRTHEuF
+guRzBiFWox80GIpladnP+YwNP9n6Qm8ncdItbavwNblCPC3NHWH8RVFmzLuVlV8QRYl8sDGZDEMH
+p+ZmZ/R2oNtXkTX4owmjhkwsTm8ou1JV2VhV+1KvVnHLWbq/nZ8p/cBH3q4JByNBf2hoPiUEQ031
+7okzc4xmxt8REASh4XxrW52QPjjTzzWv3fajXs3AF1FXHRfaWjxSWByaYlg6bsCKsSkx70neZAWC
+YSEcJm+1rBbT+LwR5Huvxrp9FXlTLI3Vbz63uHDk49Ma9p8mxuXlq/SvgpylByUburbdfrG/nZ8p
+/cClOy+Sp6a1VVn/bsGB3Rds/3J9b2NuaorVbnd4vd7TZyrcpYMyMzPaKMe67S/qH94vUWvPSJev
+tInBkKrIudlpH88fdIf7k3dV/o4geRkmb6GNRj5/fG6vTtS3rKJ6v3vl5omy4P5s5+qo8VNPKefP
+fr7n6IHKYv2r6DLun7qUfuCDOy6EAqLbTS3fOOTYP+y1h4MFz5N3s2pbmzsYCtbX2+nq0RnDhrkk
++8u/WaN/+JIzckNboMPlUWV5RO6QHdMtWRb2Dvf3tPvr7M0dnSFibDYZGZaZOXWc7tFuXYX9RPix
+lwfSZBVXG2q/3l68uJAZveCjw6fnG8eOf/IZ/Q9LjPunLtUL4C11YUF0eaR5JYrtC2drBZ250Ele
+f/1+P/n02dzi4i+OHT48+0qo5pXfvqR/+DfPyyeaAq4mV/aYrGeG8ytzuLvuQk7UQlgkxlazieOY
+Gb0C7rkKz3lu2mqerCIUDIUDbc5Tuz7kzPt//qlr86akQYPlNRviY9Kn6QXe/7cD3irer7izpgeF
+kOj1BThWlaSIosgGnm9pcYbr09NTh/pZ56vb1ukfnoz+erVc65O/M4xflcvo3MtWVR8WI+QDEtHV
+/yuK21fh7wgNGpgsyxJZBc/xHqdj2oiR2efqmi9UGAqLsktefdAa96F+8evChoA60toLJ5KzzTtk
+cGqvdtGT0Nnu2ffvUHNT1pKV5oysB/kk3Kf6BTB2/0Jg4CEw8BAYeLGB9xw8G++JYX1TbOCjNnu8
+J4b1TQgMPAQGHgIDD4GBpwv424/kxnue2D2GwMBDYOAhMPAQGHgIDDwEBh4CAw+BgYfAwENg4CEw
+8BAYeAgMPAQGHgIDD4GBh8DAiw18rCdwEQInbBrAFfbuF4um5MZ7ntg9hsDAQ2DgITDwtIAbu18s
+mpIT73li9xgCAw+BgYfAwENg4CEw8BAYeAgMPAQGHgIDD4GBh8DAQ2DgITDwEBh4CAw8BAYeAgMv
+NvDxnsCzEDhhe+iAaTr2kqGmAVzZE3gyEOAb/wfPw2P8cAFTeAR3BRj4YQuBgYfAwENg4CEw8LSA
+Hd0vzpqcHe95YvcYAgMPgYGHwMBDYOAhMPAQGHgIDDwEBh4CAw+BgYfAwENg4CEw8GIDn+gJPBOB
+EzYEBh4CA08D+GxP4AIETtQQGHgIDDwEBh4CAw+BgYfAwENg4CEw8BAYeAgMPC3gy90vziwYEe95
+YvcYAgMPgYGHwMBDYOAhMPAQGHgIDDwEBl5s4LKewIUInLAhMPAQGHgIDDwN4KqewPkInKghMPAQ
+GHgIDDwEBh4CAw+BgYfAwENg4CEw8BAYeAgMPAQGHgIDTwv4SveLhfnD4z1P7B5DYOAhMPAQGHgI
+DLzYwCd7As9A4IQNgYGHwMBDYOAhMPA0gKt7Ak9C4EQNgYGHwMBDYOAhMPAQGHgIDDwEBt7/AG5s
+gzW3iO6oAAAAAElFTkSuQmCC</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SendInput Timeout="20000" Command="{F12}" PauseAfter="500" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="19"/>
+    <SearchUI Timeout="200000" Command="{MKEY LEFT,CLICK}" PauseAfter="300" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="20">
+      <Object>
+        <ObjectSearchInfo Name="Изображения_OUTLINEITEM_{6A68673A-060D-4838-AE4B-D5508F792E56}">
+          <Object Module="mspaint.exe" ModuleSize="6376960" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
+            <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="DIALOG" State="FOCUSABLE" DefaultAction="Сохранить">
+            <RootRect Left="8" Top="30" Right="675" Bottom="472"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Сохранить как" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="24" Top="3" Right="675" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="6"/>
+          </Object>
+          <Object Class="DUIViewWndClassName" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="WorkerW" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="30" Right="675" Bottom="65"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="Button" Name="Сохранить" Role="WINDOW" Text="Со&amp;хранить" ShortCut="Alt+х">
+                <RootRect Left="460" Top="434" Right="558" Bottom="460"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="DirectUIHWND" Name="Панель проводника" Role="WINDOW">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PANE">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="5"/>
+          </Object>
+          <Object Class="NamespaceTreeControl" Name="Узел управления" Role="WINDOW" Text="Эл. управления дерева пространства имен">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Командный модуль" Role="TOOLBAR">
+                <RootRect Left="8" Top="65" Right="675" Bottom="96"/>
+              </Top>
+              <Right Module="" ModuleSize="0" Class="SHELLDLL_DefView" Name="Просмотр папок оболочки" Role="WINDOW" Text="ShellView">
+                <RootRect Left="183" Top="96" Right="675" Bottom="355"/>
+              </Right>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Панель подробностей" Role="ROLE0">
+                <RootRect Left="8" Top="355" Right="675" Bottom="420"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="SysTreeView32" Name="Эл. управления дерева пространства имен" Role="WINDOW" Text="Дерево">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Role="OUTLINE">
+            <RootRect Left="9" Top="96" Right="163" Bottom="355"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="" Name="По вертикали" Role="SCROLLBAR" Text="" Value="16" Description="Изменяет положение видимой области по вертикали">
+                <RootRect Left="163" Top="96" Right="180" Bottom="355"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="11"/>
+          </Object>
+          <Object Name="Изображения" Role="OUTLINEITEM" State="COLLAPSED;FOCUSABLE;SELECTABLE" Value="2" DefaultAction="Перейти" ParentId="16">
+            <InnerPoint X="53" Y="11"/>
+            <RootRect Left="57" Top="138" Right="137" Bottom="159"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Документы" Role="OUTLINEITEM" State="COLLAPSED;FOCUSABLE;SELECTABLE" Text="" Value="2" DefaultAction="Перейти" ParentId="17">
+                <RootRect Left="57" Top="117" Right="124" Bottom="138"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Музыка" Role="OUTLINEITEM" State="COLLAPSED;FOCUSABLE;SELECTABLE" Text="" Value="2" DefaultAction="Перейти" ParentId="15">
+                <RootRect Left="57" Top="159" Right="104" Bottom="180"/>
+              </Bottom>
+            </Neigbours>
+            <Image>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
+LGCGy+SA/wfmJh0HInVXZwAAAABJRU5ErkJggg==</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="200000" Command="{MKEY LEFT,DBLCLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="21">
+      <Object>
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{D0041F8B-C932-4112-A75E-8039D52B1C1E}">
+          <Object Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
+            <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="DIALOG" State="FOCUSABLE" DefaultAction="Сохранить">
+            <RootRect Left="8" Top="30" Right="675" Bottom="472"/>
+            <Neigbours>
+              <Top Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Сохранить как" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="24" Top="3" Right="675" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="6"/>
+          </Object>
+          <Object Class="DUIViewWndClassName" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Class="WorkerW" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="30" Right="675" Bottom="65"/>
+              </Top>
+              <Bottom Class="Button" Name="Сохранить" Role="WINDOW" Text="Со&amp;хранить" ShortCut="Alt+х">
+                <RootRect Left="460" Top="434" Right="558" Bottom="460"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="DirectUIHWND" Name="Панель проводника" Role="WINDOW">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PANE">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="5"/>
+          </Object>
+          <Object Name="Панель подробностей">
+            <RootRect Left="8" Top="355" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Class="NamespaceTreeControl" Name="Узел управления" Role="WINDOW" Text="Эл. управления дерева пространства имен">
+                <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+              </Top>
+              <Bottom Class="" Name="Элементы управления приложения" Role="OUTLINE" State="OFFSCREEN">
+                <RootRect Left="8" Top="420" Right="675" Bottom="420"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="5"/>
+          </Object>
+          <Object Class="ComboBox" Name="Имя файла:" Role="WINDOW" Text="Безымянный" ShortCut="Alt+И">
+            <RootRect Left="133" Top="365" Right="670" Bottom="388"/>
+            <Neigbours>
+              <Left Class="" Name="Имя файла:" Role="STATICTEXT" ShortCut="Alt+И" Description="Имя файла:">
+                <RootRect Left="18" Top="365" Right="133" Bottom="388"/>
+              </Left>
+              <Bottom Class="" Name="Тип файла:" Role="STATICTEXT" ShortCut="Alt+Т" Description="Тип файла:">
+                <RootRect Left="18" Top="390" Right="133" Bottom="413"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="COMBOBOX" State="COLLAPSED;FOCUSABLE" Value="Безымянный" ShortCut="Alt+И">
+            <RootRect Left="133" Top="365" Right="670" Bottom="388"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Class="Edit" Role="WINDOW" State="FOCUSED;FOCUSABLE" ShortCut="Alt+И">
+            <RootRect Left="136" Top="368" Right="650" Bottom="385"/>
+            <Neigbours>
+              <Right Class="" Name="Открыть" Role="PUSHBUTTON" Text="" DefaultAction="Открыть" ShortCut="Alt+Стрелка вниз" ParentId="2">
+                <RootRect Left="654" Top="366" Right="669" Bottom="387"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="TEXT" Value="Безымянный" ShortCut="Alt+И">
+            <InnerPoint X="100" Y="7"/>
+            <RootRect Left="136" Top="368" Right="650" Bottom="385"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAANsUlEQVR42u2dC1hUVR7Az+UxgKS8
+htosA+SRKCYi4KqLpsCqaCbmo/L9JSi5vaDHRrrSmlau0ooRglZq9aViD6nAEsoiv92+LNLIeCuk
+YvFSEBhgZu6ee+887tx5MA4zzOXs//f54eF//uec8fzmnHtn5gjUmqNtr8UjdCHnrxEfJf74RQrC
+hfRSmaypqcnJyUkikTg4OCA1FEXRNI2/8iMYmUzm7e1d9XtPyG0uCBAT1NHW1ji2VPyU92fzWl8L
+3Dt7UmWpLBcEkwF1uLlZJThVWpjQnBnH/J0nyxt8wfJrBYq+i7SCVsrltJJGNKVU4m8USvYP5TTC
+xSNymDTG3jM2xKBWHW7aGYtQXW7C5Kq0pl24WJLmm5g3+Fs03dOUJfEIcnD+c3fbxz2drW2t7XeN
+iXV0lnDV8t4bbfVnpXc/Y+8ZG2JQkQidYQqRW//7WXIAF/zSwyNx8FdwT9NuiefduODkOgd/rT/z
+WGffrQFjJkjcvfCiphXyPypP/mnCDnvP2BCDunr1qn7U09PTjoIR43he3XdJN2RSqbeb7+hoWtmr
+VPQ11X47MnynvWdsiEE1NjbqR728vOwg+I/dEi+N4DnVpx/p6vX18XKT+k9QKnrwn9b6n+6IyDTU
+tCYrZkzqf3Ah6RN5zlydiDaEilKc7ivPrCh9PAhpvt/HFKbwgsbRaW6of1FCXb58RT/q4+M9+IK7
+f8909R6LC0ql3Nk1rrI0uVsu9fF09R41hpYzgtsaq0dN2q3fkJnsX9PxNGsKqCgrK/hxxgRjBX0i
+T6vGPsKSkvaVh6pd4prt3DfakglqslLW5u9DS7g8Yf/iVYwFX9aP+vj4DL7grsadbtIwbFcp73V2
+m45nskfujQV73u6vxILlPV3tLa6e0d7+ywQNs2KcOK1a1dpKvj1+GaeuRW+zZV7RKEUpMdWhYan5
+ek8Es54ddoS6du2aftTV1XXwBd+49EpRZ9OJq183dDeOdLlzXKcyVjLB19NthPR2pULGOFb0dnXK
+/CfnCBqmOMUYUsiiI0+3VrX4FhQI1yBusyu4lP8s4SI4U8+lOU8Ou0JVVlbqR/38/AZZsIJWPFU8
+uay31sWF4kbp7aWl7R6vjorz8vbBavEW7eq3ve3X5wKm5ArapjilLFAJEggWrGgDtbpXbk1cVzBu
+V4BHQHqL1cCOITYouVyuH8XBQRZ84Oc9+2o2u7g54L657uV9tEPniPV3rZrh1kIzgvvcg3e3nn92
+9NQ8QVtjK1jv+ijYotVuNHnaOycVSaoot0iF24Por7+sIJEInnt4fCv9W7DXPbUdPztLKKWCdlf4
+vhFfkP/DWw/e0uiEmPe3hofmtfzydOC0/YK2WTEx2qvpGOOXY+H1uGCB9pabv88KVrDmZptDdcs9
+BBYvJ0gkgse/Pnx1xBPPxbycVri2+FK+r8udefMLfmr8Lr1w/TsRM6USJ5yzRfbaCy4vBv3lLUFb
+Q3fRBm99BILVy0/oSv8arNdc7LdWWsQieOpuv5nBCVsTXnegHDMK0jbcm3bl+m/rjifIu/s+iJ7p
+4uiIczZe2pY5ckdwzNt6rdV7K2918bfapE8qQrfzIlwaL8u817Iaq/r9i3cli0Xw5o+e+KDizcl3
+zMp5+Ii7yy2XW3974MDUdrolnPbdFh3O5dDIgZYE+ke9au9JG0qIRXBLe1Ni1qTfFa2BI8btW3ss
++eDius5fXGRO/4649w6pN6IZJG63etw+y+vOOfaetKGEWARj2ruuZxx5quj88T5FLx5gkteo1Nin
+w8PnSYbdZu9ZGsKISDBgC0Aw4XCqkth37LQ3/iCYGKjMCrn+e0AgmBj4gjXv1yTJZHtAMBkYWMG4
+FL/HDsdm4dCdLRCPYDh0ZxNEtEXDoTtbIKKXSXDozhaISbAVD93x9iN1yNDH+8JjeMYZ4IE9+yEi
+wVY8dFdTUxMUpPOhf7AwhwkIjuEZoSbL+IE9pi5/iZgVi0iwzQ7dFSxgT1UayjH/c11jhwXE/smw
+iATb4tCd2iYycrbSoB6DH/ibOA0i6pMdYhFs7UN36iuu6oJrbM1ZJpi3MbPXYvjAv39scehO5UV1
+NtaMFWz40J2mI0OZSZmZ5fliPjcrFsFWP3SnhhPzNlq71lCOZStYN1fUO7RoBFv50J0GtRdkOGeA
+gsV/Ey0awTY7dKf339EMHswz9WpWPzN4l/pVtthfBYtHMBy6sxFiEQyH7myEWAQjOHRnG0QkGLAF
+IJhwQDDhgGDCsb5ggx0C9sL6ghsaGswcG3fFFfBADSxtbW1cn4IcfgS4Kawv+MqVK+YMzMfR0fHU
+qVMzZszw9PTUWAesgvUF44Zmjs1fwceOHVu9erVSSfPC2hxYwRZjfcEtLS06A7BNcMHZ2RmvVIVC
+0dfXJxgOD3T06NGVK1fRtBIDi9iKDJJgzu66dev279+PkwXDcYJXrFiJ9StZ7D0t5GCWYEcW/TRO
+Rr+CcT+4eXh4+NKlS9PT040LXtEnVyhZx/aeFnIwSzD+Om3atM7OTsTeEEml0rFjx4aEhKSkpOBM
+04K5tTt+/Phx48YtZjEmePnyFXj3VoBgq3ITK3jNmjXDhg0bOXJkWFgY/hodHW3OCnZzc8NPDldX
+17i4uKioqNjYWGOCFy16oLu7u7e3D15JWxFzr8Gc44yMjMjIyMDAwNDQUKwWr7Z+r8HcCn700Ucn
+TpyIF/HUqVONCU5MXNTZ2dWLDfeBYKthSjB2w7/Jwp5wuaioaO7cuZxdZN5NFncNzs7OnjJlSkRE
+hDHBCxcmdnTc6Onp1b/NBizGlGC8r+Kp599Fc441dpFaMN5azbmLPn36NN6ujQm+//6F16934FoQ
+bEVMCXZ3d8dWTL/JwNX2KxiZ8Tp43vz7mptaurtl+NWwvaeFHEwJHj58OH/5IkOvgznMEWwCTnB8
+/OxLl64w/90b3uiwHqYEe3h4CFwaE9zV1aURbPAHUBuE/1ZlcXGxn5+/ROKKlzisYCtiSrCXl5eZ
+vfAFt7e36wxgxgrG+8QFFvOfHICZmBLs4nITn95rBLe2ttr7HwVooWDRkA0IJhwQTDggmHBAMOGA
+YMIBwYQDggkHBBMOCCYcKuaFD+z9GAAb0v8nAcCQBgQTDjUpd2gIPpNs70cwNAHBhAOCCUeUgr3R
+h7Ho+XxUqSmAYEsRpWCE7o5C701kCt+UoNRapgCCLUOkgvUBwZZBbcmlP0UoMxldOIb28E5TaSK4
+ML0NLWf3SaReWwfZqvnxKCNAlX9Qnazph9+D6aD+iFyBPxYItgzqQD7d73T7t6GvSlS1j8WjmQHo
+K1yF0IeL0Vt56NObcXlTgjOXIH8vdiwQbCmqLZpZpuoQd9nTme4ytNoTRZ5EKBB96I0uTmSrjAie
+zuv9oHlBAyMeQxcmoVl1CMWqgiDYMqj6H+lF3/PWUyA6E8FsyOt1p5uZ6HyE4lHADyhgsc4WymH5
+Fm1wxBI0czRadFKbBoItw1zBXwSilxG66IlSeZP+2BI08yLiN7eW4Ol6zxgQbBnUw7l0pe4WLZhZ
+fgHx9lK8hWZ4qm6+LBNsYkT/MuZ5w88HwZYBL5MIBwQTDggmHPg8mHBAMOGAYMIBwYRDFVW2DLwX
+QLTAuWjCAcGEQz355JP2fgyADaHgJ3+SDSX4qUcAYYBgwqGuX79u78cA2BC4iyYcivtdVACpUFEI
+fc8Vo7adObEhQLf6wt45kVVPt2TGMcXUz2dnChMGQnGqz84Q/TEBa0JtO9PCzXBxairKZExqwXpT
+UM6JDYjRvHAbE3rhY2sqUQ8Aim0G1dzcbKyubu/cjSi7aMNo5pviVOmDh1YdbtZ9CgwY3G1hgrU7
+BbRQxn8TXV1uwt/Q64XrGb8laQk1GwvjTyZkBxXuitXmlKT57go5fP/xBzfhfT7qpe/YbDb4Uuim
+TYeQNsj2N5lLw3XHQ7gwfxDABlC1tbX1B5bM2vojQhGbv8xf46epOrUpsDiu9qV7TTXHOY+8z7Vj
+evlsHlNigw+9yTRlikhQYodD6rHMGQWwHKq6upotfL05ODuw+ChPMI4Ux1VvnWGquU4rdQN+UF1G
+B5Y+g/6lTdQk1PMrAKtDVVVVsYVvNodkB508slo70ThyMr5q63RTzfmt6g8ui6/ZiBvwg+oyOrjs
+WbRD1b0god9RAMuh8ioq2Mn9ZsuYnMDP31+lFVx/6KG/o1f4EQ2aZFxIrkpnm+H02bUpFS9O1+lK
+JxPlMdVM4nbENTI1CGANtL9eY2L654J5Nj75fG05aBk6cqQMR5ex/pBhwWwx+Qg7UHrI9iJtsCSW
+awbYAur8+fNGKxveWf48evm9lXcZzSjNGLs38ISpDMPdzqndcD4jxowBgAFClZeXm6hueGdFQt36
+8i0xRupLXwzLHV347k0Zwm1Sqp/DjepxAeUY7xywAtS5c+cG0Pzbf96TN/rTQyv6F9zw7qr5O37i
+yovfOPePv9j7X/5/AnX27Fl7PwbAhlBlZWX2fgyADaE6Ojrs/RgAGwKnKgkHTnQQDggmHBBMOCCY
+cEAw4YBgwgHBhAOCCQcEEw4IJhwQTDggmHBAMOGAYMIBwYQDggkHBBMOCCYcEEw4IJhwQDDhgGDC
+AcGEA4IJBwQTDggmHBBMOCCYcEAw4YBgwgHBhAOCCQcEEw4IJhwQTDggmHBAMOGAYMIBwYQDggkH
+BBMOCCac/wG1T2Zdn+vp1wAAAABJRU5ErkJggg==</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SendInput Command="{CTRL}a{/CTRL}"/>
+    <SendInput Timeout="20000" Command="{StrFileNameNoExt({LoopFileName})}&#xA;{ENTER}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="22"/>
+    <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="35">
+      <Object>
+        <ObjectSearchInfo Name="Записать в файл_PUSHBUTTON_{90A932A0-FBC9-4B9F-8796-21368C8544DD}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="TForm1" Name="Компенсация дисперсии. Версия 2.32. 08.02.10" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 2.32. 08.02.10">
+            <RootRect Left="0" Top="0" Right="1382" Bottom="754"/>
+            <Childs Count="4"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="8" Top="50" Right="1374" Bottom="746"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Приложение" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Содержит команды для управления текущим видом документа">
+                <RootRect Left="8" Top="30" Right="1374" Bottom="49"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="TPageControl" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PAGETABLIST">
+            <RootRect Left="8" Top="58" Right="897" Bottom="739"/>
+            <Childs Count="8"/>
+          </Object>
+          <Object Class="TTabSheet" Name="Главная" Role="WINDOW" Text="Главная">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Главная" Role="PAGETAB" State="SELECTED;FOCUSABLE;SELECTABLE" DefaultAction="Переключить" ParentId="1">
+                <RootRect Left="10" Top="60" Right="64" Bottom="78"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="12" Top="82" Right="893" Bottom="735"/>
+            <Childs Count="14"/>
+          </Object>
+          <Object Class="Button" Name="Записать в файл" Role="WINDOW" Text="Записать в файл">
+            <RootRect Left="483" Top="286" Right="581" Bottom="311"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="TGroupBox" Name="Графики" Role="WINDOW" Text="Графики">
+                <RootRect Left="20" Top="250" Right="477" Bottom="315"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="Button" Name="Открыть файл данных" Role="WINDOW" State="FOCUSED;FOCUSABLE" Text="Открыть файл данных">
+                <RootRect Left="483" Top="254" Right="662" Bottom="279"/>
+              </Top>
+              <Right Module="" ModuleSize="0" Class="ComboBox" Name="время" Role="WINDOW" Text="время">
+                <RootRect Left="588" Top="286" Right="661" Bottom="307"/>
+              </Right>
+              <Bottom Module="" ModuleSize="0" Class="TChart" Name="" Role="WINDOW" Text="">
+                <RootRect Left="20" Top="322" Right="885" Bottom="611"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PUSHBUTTON" DefaultAction="Нажать">
+            <InnerPoint X="47" Y="9"/>
+            <RootRect Left="483" Top="286" Right="581" Bottom="311"/>
+            <Image>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</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="38">
+      <Object>
+        <ObjectSearchInfo Name="Компьютер_OUTLINEITEM_{866ECC5D-F62F-428E-B80D-83F3F4125C6E}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
+            <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="DIALOG" State="FOCUSABLE" DefaultAction="Сохранить">
+            <RootRect Left="8" Top="30" Right="675" Bottom="472"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Сохранить как" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="24" Top="3" Right="675" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="6"/>
+          </Object>
+          <Object Class="DUIViewWndClassName" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="WorkerW" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="30" Right="675" Bottom="65"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="Button" Name="Сохранить" Role="WINDOW" Text="Со&amp;хранить" ShortCut="Alt+х">
+                <RootRect Left="460" Top="434" Right="558" Bottom="460"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="DirectUIHWND" Name="Панель проводника" Role="WINDOW">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PANE">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="5"/>
+          </Object>
+          <Object Class="NamespaceTreeControl" Name="Узел управления" Role="WINDOW" Text="Эл. управления дерева пространства имен">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Командный модуль" Role="TOOLBAR">
+                <RootRect Left="8" Top="65" Right="675" Bottom="96"/>
+              </Top>
+              <Right Module="" ModuleSize="0" Class="SHELLDLL_DefView" Name="Просмотр папок оболочки" Role="WINDOW" Text="ShellView">
+                <RootRect Left="183" Top="96" Right="675" Bottom="355"/>
+              </Right>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Панель подробностей" Role="ROLE0">
+                <RootRect Left="8" Top="355" Right="675" Bottom="420"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="SysTreeView32" Name="Эл. управления дерева пространства имен" Role="WINDOW" Text="Дерево">
+            <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Role="OUTLINE">
+            <RootRect Left="9" Top="96" Right="163" Bottom="355"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="" Name="По вертикали" Role="SCROLLBAR" Text="" Value="16" Description="Изменяет положение видимой области по вертикали">
+                <RootRect Left="163" Top="96" Right="180" Bottom="355"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="11"/>
+          </Object>
+          <Object Name="Компьютер" Role="OUTLINEITEM" State="SELECTED;EXPANDED;FOCUSABLE;SELECTABLE" Value="1" DefaultAction="Перейти" ParentId="5">
+            <InnerPoint X="41" Y="12"/>
+            <RootRect Left="47" Top="222" Right="115" Bottom="243"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="Домашняя группа" Role="OUTLINEITEM" State="COLLAPSED;FOCUSABLE;SELECTABLE" Text="" Value="1" DefaultAction="Перейти" ParentId="4">
+                <RootRect Left="47" Top="180" Right="152" Bottom="201"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Локальный диск (C:)" Role="OUTLINEITEM" State="COLLAPSED;FOCUSABLE;SELECTABLE" Text="" Value="2" DefaultAction="Перейти" ParentId="62">
+                <RootRect Left="57" Top="243" Right="174" Bottom="264"/>
+              </Bottom>
+            </Neigbours>
+            <Image>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</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="39">
+      <Object>
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{8BACD720-BB32-44A7-986D-F897D1E2C49B}">
+          <Object Module="PulseViewer.exe" ModuleSize="2063872" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
+            <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="DIALOG" State="FOCUSABLE" DefaultAction="Сохранить">
+            <RootRect Left="8" Top="30" Right="675" Bottom="472"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Сохранить как" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="24" Top="3" Right="675" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="6"/>
+          </Object>
+          <Object Class="DUIViewWndClassName" Name="" Role="WINDOW" Text="">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="WorkerW" Name="" Role="WINDOW" Text="">
+                <RootRect Left="8" Top="30" Right="675" Bottom="65"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="Button" Name="Сохранить" Role="WINDOW" Text="Со&amp;хранить" ShortCut="Alt+х">
+                <RootRect Left="460" Top="434" Right="558" Bottom="460"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Class="DirectUIHWND" Name="Панель проводника" Role="WINDOW">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PANE">
+            <RootRect Left="8" Top="65" Right="675" Bottom="420"/>
+            <Childs Count="5"/>
+          </Object>
+          <Object Name="Панель подробностей">
+            <RootRect Left="8" Top="355" Right="675" Bottom="420"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="NamespaceTreeControl" Name="Узел управления" Role="WINDOW" Text="Эл. управления дерева пространства имен">
+                <RootRect Left="9" Top="96" Right="180" Bottom="355"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Элементы управления приложения" Role="OUTLINE" State="OFFSCREEN">
+                <RootRect Left="8" Top="420" Right="675" Bottom="420"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="5"/>
+          </Object>
+          <Object Class="ComboBox" Name="Имя файла:" Role="WINDOW" Text="160315_1237+25_00_profiles" ShortCut="Alt+И">
+            <RootRect Left="133" Top="365" Right="670" Bottom="388"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="" Name="Имя файла:" Role="STATICTEXT" ShortCut="Alt+И" Description="Имя файла:">
+                <RootRect Left="18" Top="365" Right="133" Bottom="388"/>
+              </Left>
+              <Bottom Module="" ModuleSize="0" Class="" Name="Тип файла:" Role="STATICTEXT" ShortCut="Alt+Т" Description="Тип файла:">
+                <RootRect Left="18" Top="390" Right="133" Bottom="413"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="COMBOBOX" State="COLLAPSED;FOCUSABLE" Value="160315_1237+25_00_profiles" ShortCut="Alt+И">
+            <RootRect Left="133" Top="365" Right="670" Bottom="388"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Class="Edit" Role="WINDOW" State="FOCUSABLE" ShortCut="Alt+И">
+            <RootRect Left="136" Top="368" Right="650" Bottom="385"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="" Name="Открыть" Role="PUSHBUTTON" Text="" DefaultAction="Открыть" ShortCut="Alt+Стрелка вниз" ParentId="2">
+                <RootRect Left="654" Top="366" Right="669" Bottom="387"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="TEXT" Value="160315_1237+25_00_profiles" ShortCut="Alt+И">
+            <InnerPoint X="256" Y="9"/>
+            <RootRect Left="136" Top="368" Right="650" Bottom="385"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAEXUlEQVR42u3dTWtcVQDGcc+0ziSZ
+JmmDNrTBRRpbF7E0pGq0YGJTMakY23Rh3fcLTIs7P0C78AVsU99gwIVFBaUo6EZBoSAtMWHGOMSE
+gFibxsmkmRfiTEI68ZbZXGjubu4c7nP/v9WBnMUD/82QTO41m5ubj0CXIbA2AosjsDgCiyOwOAKL
+I7A4AosjsDgCiyOwOAKLI7A4AosjsDgCiyOwOAKLI7A4AosjsDgCiyOwOAKLI7A4AosjsDgCiyOw
+OAKLI7A4AosjsDgCiyOwOAKLI7A4AosjsDgCizOVSsX2BvjITExM2N4AH5lSqWR7A3xkikUCKzP5
+fN72hjqLRHZEIhHnUK1WHz5Uq/dtD2wok8ut2N5QZ9Fo9OToSG9v7zvvvuc+OBLnL2xsbNge2FAm
+m122vaHOYrHYhfOJwcHB0+Nn3IexsbHjwyfW19dtD2wos7T0r+0NddbUFLt08eILx44NDQ25D6+M
+jPT391cqIQucycza3lBnbW2tVy5/4HQ9evQZ98EJfOjQU2H7UGnS6T9sb6iz9va2D69ecbr29fW7
+D07gnp6DhULR9sCGMlNTKdsb6mz37vbvvr3+9OHD3d097sNzAwOdnfvy+YLtgQ1lbt36zfaGOuvo
+2DPze2p/V1dHx2PuQ/eBA/F46717q7YHNpS5ceNX2xvqLB6PNzc3O4dyufzwYW1tzfbAhjI//vSz
+7Q3wkZmcnLK9AT4yyWTS9gb4yGSzWdsb4CPBPzbAjcDiCCyOwOIILI7A4ggsjsDiCCyOwOLMi29/
+bXsDfGS2trZsb4CPCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDi
+CCyOwOLMD3+qPasSbnwvWhyBxZlEImF7A3zEW1fEmWIxXA/nDBsCizOFQrievho2fIoWZ1ZXw/V4
+3bAxKyv8JksZgcWZXC5newN8ZJaX1d6bBDezsLBgewN8ZObn521vgI/M3Nyc7Q3wkZmdVXvzGdwI
+LM5kMhnbG+AjMzMzY3sDfGTS6bTtDfCRSaXUXk4JNzM9PW17A3xkSqVwvTA5bPhWpTi+0SGOwOII
+LI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggsjsDiCCyOwOIILI7A4ggceNen/vk+
+tbiYL2/7UwIH2zeTtz+bXY0NHIm0tmx7gcDBdi55szT4/JN7mi49vr7tBQIH22vv/7LrzVe/6ip7
+XSBwsNUCf7n/P68LBA62WuAv9q15XSBwsDmB42dPElgWgcXVAl/r9PwnbwIHmxO45ezotb0EFvUg
+8Bujn+/1fPEGgYPNCRw98/Knu5a8LhA42Agszgn86PiJT+J3vS4QONhqgT9uWfS6QOBgcwLvHB/+
+qOmO1wUCB9uDwKeHr8Zue10gcLARWJwTeMep4xPRv70uEDjYaoEv7/zL6wKBg80JHHn9JQLLOpe8
+ufxs3xMt5q3I9h+k/wf664bonFGgBwAAAABJRU5ErkJggg==</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SendInput Command="{HOME}&#xA;{path}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="40"/>
+    <SendInput Command="{ENTER}"/>
+    <Pause PauseBefore="2000"/>
+  </Loop>
+  <If V1="{move_file}" Expr="equal" V2="True" CompareAs="text" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="45">
+    <Then>
+      <SendInput Command="{ALT}{F4}{/ALT}" PauseBefore="2000" PauseAfter="2000"/>
+      <SendInput Command="{ALT}{F4}{/ALT}" PauseBefore="2000" PauseAfter="2000"/>
+      <Loop Variable="{LoopFileName2}" Items="{FileList({path_data}*)}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="49">
+        <ShellCommand Command="run" Mode="hide" Object="move" Parameters="/Y &quot;{LoopFileName2}&quot; &quot;{path_data_processed}&quot;" Wait="yes" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="50"/>
+      </Loop>
+    </Then>
+    <Else>
+      <Goto GotoLabel="EXIT_TASK"/>
+      <ShellCommand Command="run" Mode="show" Object="C:\Users\Admin\Music\1.mp3"/>
+      <Pause PauseBefore="4000"/>
+    </Else>
+  </If>
+  <ShellCommand Command="run" Mode="show" Object="C:\Users\Admin\Music\1.mp3"/>
+  <Pause PauseBefore="4000"/>
+  <SendInput Command="{ALT}{F4}{/ALT}"/>
+  <Goto GotoLabel="EXIT_TASK"/>
+  <TaskLabel Label="Ошибка"/>
+  <ShellCommand Command="run" Mode="show" Object="C:\Users\Admin\Music\2.mp3"/>
+  <Dialog DialogCaption="Программа закончила работу с ошибкой" DialogText="Ошибка произошла в строке {error}" DefaultOkButton="idOK">
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <SendInput Command="{ALT}{F4}{/ALT}"/>
+</Task>

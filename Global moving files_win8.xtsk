@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <SetVariable Variable="{start_path_pictures}" Value="C:\Users\Andrey\Pictures" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="4"/>
+  <SetVariable Variable="{start_path_data}" Value="C:\Users\Andrey\YandexDisk\1.Работа\Результаты обработки на разбор\0.Разобрать" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="5"/>
+  <SetVariable Variable="{pulsars_names}" Value="{StringList(&#xA;&quot;0007+73&quot;,&#xA;&quot;0031-07&quot;,&#xA;&quot;0138+33&quot;,&#xA;&quot;0138+59&quot;,&#xA;&quot;0301+19&quot;,&#xA;&quot;0320+39&quot;,&#xA;&quot;0329+54&quot;,&#xA;&quot;0355+54&quot;,&#xA;&quot;0450+55&quot;,&#xA;&quot;0506+39&quot;,&#xA;&quot;0517+38&quot;,&#xA;&quot;0525+21&quot;,&#xA;&quot;0809+74&quot;,&#xA;&quot;0823+26&quot;,&#xA;&quot;0834+06&quot;,&#xA;&quot;0950+08&quot;,&#xA;&quot;1005+30&quot;,&#xA;&quot;1112+50&quot;,&#xA;&quot;1133+16&quot;,&#xA;&quot;1222+25&quot;,&#xA;&quot;1237+25&quot;,&#xA;&quot;1508+55&quot;,&#xA;&quot;1541+09&quot;,&#xA;&quot;1557+09&quot;, &#xA;&quot;1642-03&quot;,&#xA;&quot;1737+13&quot;,&#xA;&quot;1821+05&quot;,&#xA;&quot;1839+56&quot;,&#xA;&quot;2016+28&quot;,&#xA;&quot;2020+28&quot;,&#xA;&quot;2032+41&quot;,&#xA;&quot;2110+27&quot;,&#xA;&quot;2224+65&quot;,&#xA;&quot;2303+30&quot;,&#xA;&quot;2315+21&quot;&#xA;)}"/>
+  <Dialog DialogCaption="Ввод данных" DefaultOkButton="idOK" DefaultCancelButton="idButton1">
+    <Field Id="idField2" Caption="Имя пульсара" DefaultValue="{pulsars_names}" Variable="{pulsar_name}" Type="Combo"/>
+    <Button Id="idOK" Caption="OK"/>
+    <Button Id="idButton1" Caption="Отмена"/>
+  </Dialog>
+  <SetVariable Variable="{order_months}" Value="{StringList(&quot;01&quot;,&#xA;&quot;02&quot;,&quot;03&quot;, &quot;04&quot;,&#xA;&quot;05&quot;,&quot;06&quot;, &quot;07&quot;,&quot;08&quot;,&#xA;&quot;09&quot;, &quot;10&quot;,&quot;11&quot;,&quot;12&quot;)}"/>
+  <SetVariable Variable="{order_years}" Value="{StringList( &quot;11&quot;,&#xA;&quot;11&quot;,&#xA;&quot;12&quot;,&#xA;&quot;13&quot;,&#xA;&quot;14&quot;,&#xA;&quot;15&quot;,&#xA;&quot;16&quot;,&#xA;&quot;17&quot;,&#xA;&quot;18&quot;)}"/>
+  <Loop Label="Цикл по годам" Variable="{y}" Items="{order_years}">
+    <Loop Label="Цикл по месяцам" Variable="{m}" Items="{order_months}">
+      <SetVariable Variable="{end_path_data}" Value="E:\Disk.Yandex\1.Работа\Результаты обработки\{pulsar_name}\20{y}\{m}{y}\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="6"/>
+      <ShellCommand Command="run" Mode="hide" Object="mkdir" Parameters="&quot;{end_path_data}&quot;" Wait="yes"/>
+      <Loop Variable="{LoopFileName}" Items="{FileList({start_path_pictures}??{m}{y}?{pulsar_name}*.png)}">
+        <ShellCommand Command="run" Mode="hide" Object="move" Parameters="/Y &quot;{LoopFileName}&quot; &quot;{end_path_data}&quot;" Wait="yes"/>
+      </Loop>
+      <Loop Variable="{LoopFileName}" Items="{FileList({start_path_data}*{m}{y}_{pulsar_name}*.txt)}">
+        <ShellCommand Command="run" Mode="hide" Object="move" Parameters="/Y &quot;{LoopFileName}&quot; &quot;{end_path_data}&quot;" Wait="yes"/>
+      </Loop>
+    </Loop>
+  </Loop>
+</Task>

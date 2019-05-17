@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <Dialog DialogCaption="Заголовок диалога" DialogText="Текст диалога" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Поле1" DefaultValue="0" Variable="{a}" Type="Integer"/>
+    <Field Id="idField2" Caption="Поле2" DefaultValue="0" Variable="{b}" Type="Integer"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <SetVariable Variable="{char}" Value="{Summ({a},{b})}"/>
+  <Dialog DialogCaption="Результат" DialogText="{char}" DefaultOkButton="idOK">
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <Dialog DialogCaption="Вычисление площади окружности" DialogText="Введите значение радиуса" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Поле1" Variable="{radius}" Type="Number"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <Code Language="VBScript" Lines="Dim R&#xA;Dim a&#xA;R = WScript.Evaluate(&quot;{radius}&quot;)&#xA;a = 3.14 * (R^2)&#xA;WScript.SetValue &quot;{area}&quot;, a"/>
+  <Dialog DialogCaption="Вычисление площади окружности" DialogText="Окружность радиуса {radius} имеет площадь {area}" DefaultOkButton="idOK">
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+</Task>

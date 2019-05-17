@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <SetVariable Variable="{list_of_objects}" Value="{StringList(&quot;B0138+59&quot;, &#xA;&quot;B0320+39&quot;,  &#xA;&quot;B0355+54&quot;, &#xA;&quot;B0823+26&quot;, &#xA;&quot;B0834+06&quot;, &#xA;&quot;B1541+09&quot;, &#xA;&quot;B1642-03&quot;, &#xA;&quot;B1737+13&quot;, &#xA;&quot;B1821+05&quot;, &#xA;&quot;B1822-09&quot;, &#xA;&quot;B1839+56&quot;, &#xA;&quot;B2016+28&quot;,&#xA;&quot;B2020+28&quot;,&#xA;&quot;B2110+27&quot;,&#xA;&quot;B2224+65,&#xA;&quot;B2303+30&quot;,&#xA;&quot;B2315+21&quot;)}"/>
+  <Pause PauseBefore="10000"/>
+  <SendInput Command="Пширков"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Максим"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Сергеевич"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="ГАИШ МГУ"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="pshirkov@gmail.com"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="8 - 916 - 145 - 70 - 42"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="142290, Московская обл., Пущино, мкр.&quot;Д&quot;, д.20а, кв.250 "/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Потапов Владимир Алексеевич, Казанцев Андрей Николаевич, ПРАО АКЦ ФИАН"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Изучение аномальных вариаций &#xA;собственного вращения секундных &#xA;пульсаров и определение параметров &#xA;гипотетических планетных систем по&#xA;наблюдениям на радиотелескопе БСА ФИАН"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Накопление наблюдательных данных для исследования долговременных вариаций моментов прихода импульсов секундных пульсаров"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="{list_of_objects}&#xA;"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="БСА-1, ЦАС, авто"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Общее время наблюдений ~600 часов"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="15, 16 и последние три дня дня каждого месяца"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Долговременные ряды данных, хронометрирование, оценка стабильности собственного вращения пульсара на больших временах"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="-"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="{TAB}"/>
+</Task>

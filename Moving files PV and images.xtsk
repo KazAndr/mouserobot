@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <SetVariable Variable="{start_path_pictures}" Value="C:\Users\Администратор\Pictures\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="4"/>
+  <SetVariable Variable="{start_path_data}" Value="E:\Disk.Yandex\1.Работа\Результаты обработки\0.Разобрать\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="5"/>
+  <TaskLabel Label="Возврат"/>
+  <Dialog DialogCaption="Ввод данных" DialogText="Введите имя пульсара, месяц и год за которые хотите перенести данные" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Пульсар" Variable="{pulsar}" Type="Text"/>
+    <Field Id="idField2" Caption="Месяц (ММ)" DefaultValue="01" Variable="{m}" Type="Text"/>
+    <Field Id="idField3" Caption="Год (YY)" DefaultValue="16" Variable="{y}" Type="Text"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <SetVariable Variable="{end_path_data}" Value="E:\Disk.Yandex\1.Работа\Результаты обработки\{pulsar}\20{y}\{m}{y}\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="6"/>
+  <ShellCommand Command="run" Mode="hide" Object="mkdir" Parameters="&quot;{end_path_data}&quot;" Wait="yes"/>
+  <Loop Variable="{LoopFileName}" Items="{FileList({start_path_pictures}??{m}{y}?{pulsar}*.png)}">
+    <ShellCommand Command="run" Mode="hide" Object="move" Parameters="/Y &quot;{LoopFileName}&quot; &quot;{end_path_data}&quot;" Wait="yes"/>
+  </Loop>
+  <Loop Variable="{LoopFileName}" Items="{FileList({start_path_data}*{m}{y}_{pulsar}*.txt)}">
+    <ShellCommand Command="run" Mode="hide" Object="move" Parameters="/Y &quot;{LoopFileName}&quot; &quot;{end_path_data}&quot;" Wait="yes"/>
+  </Loop>
+  <Dialog DialogCaption="Дальнейшие действия" DialogText="Продолжить перенос файлов" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Продолжить перенос файлов" DefaultValue="True" Variable="{question}" Type="Checkbox"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <If V1="{question}" Expr="equal" V2="True" CompareAs="text">
+    <Then>
+      <Goto GotoLabel="Возврат"/>
+    </Then>
+    <Else>
+      <Goto GotoLabel="EXIT_TASK"/>
+    </Else>
+  </If>
+  <Goto GotoLabel="EXIT_TASK"/>
+</Task>

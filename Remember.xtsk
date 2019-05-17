@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <Dialog DialogCaption="Напоминалка" DialogText="Необходимо сформировать протоколы наблюдения." DefaultOkButton="idOK">
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+</Task>

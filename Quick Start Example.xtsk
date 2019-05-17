@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <!--
+Это простой пример, демонстрирующий, как работает MouseRobot.
+
+* Нажмите "Выполнить", чтобы увидеть пример в действии
+                           или
+* Выберите "Новый" для того, чтобы создать новый макрос
+-->
+  <Dialog Comment="Шаг &quot;Диалог&quot; предназначен для ввода и отображения информации. Например, здесь мы спрашиваем, что делать дальше." DialogCaption="Привет" DialogText="С помощью MouseRobot Вы можете с легкостью автоматизировать любые повторяющиеся задачи!&#xA;К примеру, MouseRobot способен автоматически запустить Блокнот и напечатать что-нибудь." DefaultCancelButton="idCancel">
+    <Field Id="idText" Caption="Текст, который будет набран в Блокноте" DefaultValue="Этот текст напечатан программой MouseRobot!" Variable="{ТекстДляНабора}" Type="Text"/>
+    <Field Id="idRepeats" Caption="Повторить текст (кол-во раз)" DefaultValue="3" Variable="{ЧислоПовторов}" Type="Integer"/>
+    <Button Id="idShowSample" Caption="Да, покажите, как это работает!"/>
+    <Button Id="idCancel" Caption="Нет, спасибо"/>
+  </Dialog>
+  <If Comment="Шаг Условие позволяет выполнять тот или иной набор шагов в зависимости от значения логического выражения. Последующие шаги в этом примере будут выполнены, только если нажата кнопка &quot;Да, покажите, как это работает!&quot; в шаге Диалог." V1="{LastDialogResult}" Expr="equal" V2="idShowSample">
+    <Then>
+      <ShellCommand Comment="Шаг Команда Windows позволяет запускать программы, выполнять команды, открывать и печатать документы. Мы используем имя файла &quot;notepad.exe&quot; для запуска Блокнота Windows." Command="run" Mode="show" Object="notepad.exe"/>
+      <SearchUI Timeout="5000" Comment="Это шаг &quot;Поиск объекта на экране&quot; - один из наиболее полезных и мощных в MouseRobot. Используя этот шаг MouseRobot способен взаимодействовать с любым объектом на экране: окном, кнопкой, полем ввода и т.п. Здесь мы используем шаг для поиска и активации окна Блокнота, а также для проверки того, что Блокнот появился на экране. MouseRobot автоматически дождется готовности Блокнота к ввода текста." Command="{MKEY LEFT,CLICK}">
+        <Object>
+          <ObjectSearchInfo Name="_TEXT_{7EBE17B2-7781-4207-A340-4283D16A520E}">
+            <Object Module="notepad.exe" ModuleSize="179712" Class="Notepad" Name="Untitled - Notepad" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Untitled - Notepad">
+              <RootRect Left="0" Top="0" Right="830" Bottom="489"/>
+              <Childs Count="4"/>
+            </Object>
+            <Object Role="CLIENT" State="FOCUSABLE">
+              <RootRect Left="8" Top="50" Right="822" Bottom="481"/>
+              <Neigbours>
+                <Top Module="" ModuleSize="0" Class="" Name="Application" Role="MENUBAR" State="FOCUSABLE" Text="" ShortCut="Alt" Description="Contains commands to manipulate the current view or document">
+                  <RootRect Left="8" Top="30" Right="822" Bottom="49"/>
+                </Top>
+              </Neigbours>
+              <Childs Count="1"/>
+            </Object>
+            <Object Class="Edit" Name="" Role="WINDOW" State="FOCUSED;FOCUSABLE" Text="">
+              <RootRect Left="8" Top="50" Right="822" Bottom="481"/>
+              <Childs Count="4"/>
+            </Object>
+            <Object Role="TEXT">
+              <InnerPoint X="12" Y="13"/>
+              <RootRect Left="10" Top="52" Right="803" Bottom="462"/>
+              <Neigbours>
+                <Right Module="" ModuleSize="0" Class="" Name="Vertical" Role="SCROLLBAR" State="UNKNOWN" Value="0" Description="Used to change the vertical viewing area">
+                  <RootRect Left="803" Top="52" Right="820" Bottom="462"/>
+                </Right>
+                <Bottom Module="" ModuleSize="0" Class="" Name="Horizontal" Role="SCROLLBAR" State="UNKNOWN" Value="0" Description="Used to change the horizontal viewing area">
+                  <RootRect Left="10" Top="462" Right="803" Bottom="479"/>
+                </Bottom>
+              </Neigbours>
+              <Image>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</Image>
+            </Object>
+          </ObjectSearchInfo>
+        </Object>
+      </SearchUI>
+      <Loop Comment="Еще один полезный шаг - Цикл, может быть использован для автоматического повторения действий для набора чисел, файлов, объектов на экране и т.п. Здесь мы используем функцию MouseRobot {Range(от,до)} для цикла по числам 1, 2, ..., {ЧислоПовторов}." Variable="{НомерПовтора}" Items="{Range(1,{ЧислоПовторов})}">
+        <SendInput Comment="Шаг Клавиатура и Мышь позволяет эмулировать любую активность, такую как набор текста или перемещение мыши. Обратите внимание на использование переменных MouseRobot для подстановки их значений напрямую в текст. Кроме того, необходимо использовать специальные {ТЕГИ} для непечатных клавиш, таких как Enter, Backspace или F1." Command="Повтор {НомерПовтора}:{ENTER}&#xA;{ТекстДляНабора}{ENTER}&#xA;{ENTER}"/>
+      </Loop>
+    </Then>
+  </If>
+</Task>

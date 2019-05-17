@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <SetVariable Variable="{list_of_objects}" Value="{StringList(&#xA;&quot;J0138+3341&quot;,&#xA;&quot;J1005+3010&quot;,&#xA;&quot;B1920+21&quot;,&#xA;&quot;B1918+19&quot;,&#xA;)}"/>
+  <Pause PauseBefore="10000"/>
+  <SendInput Command="Самодуров"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Владимир"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Алексеевич"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="НИУ ВШЭ"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="vsamodurov@hse.ru"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="8 - 906 - 098 - 48 - 88 "/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="142290, г. Пущино Московской области, мк-н Д, д. 12, кв. 49"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Казанцев Андрей Николаевич, &#xA;ПРАО АКЦ ФИАН&#xA;"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Мониторинг средних профилей пульсаров и поиск наиболее ярких импульсов для избранных RRAT-объектов. "/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Наблюдения  недавно открытых RRATобъектов J0138+3341  и J1005+3010 необходимы для накопления статистики профилей единичных импульсов. Наблюдения  B1920+21  и B1918+19 необходимы  для изучения вариаций среднего профиля, и поиска ярких импульсов с целью тестирования алгоритмов поиска импульсов с высокими мерами дисперсий."/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="{list_of_objects}&#xA;"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="БСА-1, ЦАС, авто"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Общее время наблюдений ~13.5 часов"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Максимально возможное покрытие квартала"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="Возможные обнаружения сильных индивидуальных импульсов от недавно открытых RRAT. Последующее уточнение астрометрических и вращательных параметров исследуемых объектов. Накопление наблюдательных данных для разработки корректных алгоритмов поиска. Анализ амплитудных флуктуацй, постоение статистических распределений для индивидуальных импульсов."/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="-"/>
+  <SendInput Command="{TAB}"/>
+  <SendInput Command="{TAB}"/>
+</Task>
