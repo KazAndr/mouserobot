@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
   <SetVariable Variable="{list_of_objects}" Value="{StringList(&#xA;&quot;B0011+47&quot;,&#xA;&quot;B0031-07&quot;,&#xA;&quot;B0052+51&quot;,&#xA;&quot;B0105+65&quot;,&#xA;&quot;B0154+61&quot;,&#xA;&quot;B0301+19&quot;,&#xA;&quot;B0329+54&quot;,&#xA;&quot;B0458+46 &quot;,&#xA;&quot;B0525+21&quot;,&#xA;&quot;J0642-0537&quot;,&#xA;&quot;B0751+32 &quot;,&#xA;&quot;J0806+2850&quot;,&#xA;&quot;B0809+74&quot;,&#xA;&quot;B0917+63&quot;,&#xA;&quot;B0940+16&quot;, &#xA;&quot;B0950+08&quot;,&#xA;&quot;J1021-0230&quot;,&#xA;&quot;B1112+50&quot;, &#xA;&quot;B1133+16&quot;,&#xA;&quot;J1131+2510&quot;, &#xA;&quot;B1237+25&quot;, &#xA;&quot;B1322+83&quot;,&#xA;&quot;J1345-0812&quot;,&#xA;&quot;B1530+27 &quot;,&#xA;&quot;J1730+1312&quot;,&#xA;&quot;J1739+2728&quot;,&#xA;&quot;J1839+2606&quot;,&#xA;&quot;J2021+4026&quot;,&#xA;&quot;J2032+4127&quot;,&#xA;&quot;J2201+2152&quot; &#xA;)}"/>
+  <SetVariable Variable="{list_of_objects}" Value="{StringList(&#xA;&quot;B0031-07&quot;,&#xA;&quot;B0105+65&quot;,&#xA;&quot;B0301+19&quot;,&#xA;&quot;B0329+54&quot;,&#xA;&quot;B0525+21&quot;,&#xA;&quot;J0642-0537&quot;,&#xA;&quot;J0806+2850&quot;,&#xA;&quot;B0809+74&quot;,&#xA;&quot;B0950+08&quot;,&#xA;&quot;J1021-0230&quot;,&#xA;&quot;B1112+50&quot;, &#xA;&quot;B1133+16&quot;,&#xA;&quot;J1131+2510&quot;, &#xA;&quot;B1237+25&quot;, &#xA;&quot;J1345-0812&quot;,&#xA;)}"/>
   <Pause PauseBefore="10000"/>
   <SendInput Command="Казанцев"/>
   <SendInput Command="{TAB}"/>
@@ -16,7 +17,7 @@
   <SendInput Command="{TAB}"/>
   <SendInput Command="142290, Московская обл., Пущино, мкр.&quot;Д&quot;, д.20, кв.126 "/>
   <SendInput Command="{TAB}"/>
-  <SendInput Command="Потапов Владимир Алексеевич, &#xA;ПРАО АКЦ ФИАН; &#xA;Сафронов Григорий Боричович, &#xA;ПРАО АКЦ ФИАН, ГНЦ РФ ИТЭФ&#xA;"/>
+  <SendInput Command="Потапов Владимир Алексеевич, &#xA;ПРАО АКЦ ФИАН; &#xA;Сафронов Григорий Бориcович, &#xA;ПРАО АКЦ ФИАН, ГНЦ РФ ИТЭФ&#xA;"/>
   <SendInput Command="{TAB}"/>
   <SendInput Command="Поиск и исследование гигантских импульсов секундных пульсаров"/>
   <SendInput Command="{TAB}"/>
@@ -30,7 +31,7 @@
   <SendInput Command="{TAB}"/>
   <SendInput Command="Максимально возможное покрытие квартала"/>
   <SendInput Command="{TAB}"/>
-  <SendInput Command="Возможные обнаружения ГИ у секундных пульсаров у секундных пульсаров из программы &quot;поиска&quot;. Накопление данных для уже известных пульсаров с ГИ. Анализ амплитудных флуктуацй, постоение статистических распределений для индивидуальных импульсов пульсаров всей программы наблюдений"/>
+  <SendInput Command="Возможные обнаружения ГИ у секундных пульсаров у секундных пульсаров из программы &quot;поиска&quot;. Накопление данных для уже известных пульсаров с ГИ. Анализ амплитудных флуктуаций, построение статистических распределений для индивидуальных импульсов пульсаров всей программы наблюдений"/>
   <SendInput Command="{TAB}"/>
   <SendInput Command="{TAB}"/>
   <SendInput Command="1.A.N. Kazantsev, V.A. Potapov, Search for the Giant Pulses (GPs) — an extreme phenomenon in radio pulsar emission, Abstract book, P.:47.{ENTER}&#xA;http://www.astro.spbu.ru/Sobolev100/sites/default/files/Sobolev-100.pdf{ENTER}&#xA;2. A.N. Kazantsev, V.A. Potapov, Discovery of Giant Pulses from the Pulsar B1237+25(J1239+2453), Astronomicheskii Tsirkulyar, vol.1620, p. 1-7, ISSN 0236-2457,{ENTER}&#xA;http://comet.sai.msu.ru/~gmr/AC/AC1620.pdf{ENTER}&#xA;3.A.N. Kazantsev, V.A. Potapov, Discovery of Anomalously Strong (Giant) Pulses from the Pulsar B1133+16 (J1136+1551) at a Frequency of 111~MHz, Astronomicheskii Tsirkulyar, vol.1628, p. 1-8, ISSN 0236-2457,{ENTER} &#xA;http://comet.sai.msu.ru/~gmr/AC/AC1628.pdf{ENTER}&#xA;4.Казанцев А.Н., Потапов В.А. Наблюдения гигантских импульсов пульсара B1237+25 (J1239+2453) на частоте 111 МГц. Обнаружение и классификация, Астрономический журнал, 94, 749, 2017;{ENTER}&#xA;5. A.N. Kazantsev, V.A. Potapov, Search for giant pulses of radio pulsars at frequency 111 MHz with LPA radio telescope, Research in Astronomy and Astrophysics, Vol.18, №8 (2018){ENTER}&#xA;6. A.N. Kazantsev, V.A. Potapov, G. B. Safronov, Studies of Giant Pulses from the Pulsar B0301+19 (J0304+1932) at 111 MHz, Astronomy Reports 63(2):134-145, DOI: 10.1134/S1063772919020045"/>
