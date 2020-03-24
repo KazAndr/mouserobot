@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
-  <SetVariable Variable="{list_of_objects}" Value="{StringList(&quot;B0138+59&quot;, &#xA;&quot;B0320+39&quot;,  &#xA;&quot;B0355+54&quot;, &#xA;&quot;B0823+26&quot;, &#xA;&quot;B0834+06&quot;, &#xA;&quot;B1541+09&quot;, &#xA;&quot;B1642-03&quot;, &#xA;&quot;B1737+13&quot;, &#xA;&quot;B1821+05&quot;, &#xA;&quot;B1822-09&quot;, &#xA;&quot;B1839+56&quot;, &#xA;&quot;B2016+28&quot;,&#xA;&quot;B2020+28&quot;,&#xA;&quot;B2110+27&quot;,&#xA;&quot;B2224+65,&#xA;&quot;B2303+30&quot;,&#xA;&quot;B2315+21&quot;)}"/>
+  <SetVariable Variable="{list_of_objects}" Value="{StringList(&#xA;&quot;B0138+59&quot;, &#xA;&quot;B0320+39&quot;,  &#xA;&quot;B0355+54&quot;, &#xA;&quot;B0823+26&quot;, &#xA;&quot;B0834+06&quot;, &#xA;&quot;B1541+09&quot;, &#xA;&quot;B1642-03&quot;, &#xA;&quot;B1737+13&quot;, &#xA;&quot;B1821+05&quot;, &#xA;&quot;B1822-09&quot;, &#xA;&quot;B1839+56&quot;, &#xA;&quot;B2016+28&quot;,&#xA;&quot;B2020+28&quot;,&#xA;&quot;B2110+27&quot;,&#xA;&quot;B2224+65,&#xA;&quot;B2303+30&quot;,&#xA;&quot;B2315+21&quot;)}"/>
   <Pause PauseBefore="10000"/>
   <SendInput Command="Пширков"/>
   <SendInput Command="{TAB}"/>
