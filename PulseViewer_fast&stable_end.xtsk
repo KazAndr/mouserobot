@@ -13,7 +13,7 @@
   <SetVariable Variable="{path_data_processed}" Value="H:\Data_pulsar\0.processed\" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="6"/>
   <SearchUI Command="{MKEY LEFT,DBLCLICK}{noise_start}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="8">
     <Object>
-      <ObjectSearchInfo Name="_TEXT_{354B4E29-9772-45FB-8D27-41C36B599CD7}">
+      <ObjectSearchInfo Name="_TEXT_{C5B8F181-5B3D-4DAC-9C92-951DB43879C6}">
         <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
           <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
           <Childs Count="5"/>
@@ -150,7 +150,7 @@ ImugDAUw/3a/yj1PACE3V6LLd5oLKDIcxppB/wf6Ab826NDA8gAAAABJRU5ErkJggg==</Image>
   </SearchUI>
   <SearchUI Command="{MKEY LEFT,DBLCLICK}{noise_end}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="9">
     <Object>
-      <ObjectSearchInfo Name="_TEXT_{D275A1B0-1127-44D1-8984-D43F78CFA1CF}">
+      <ObjectSearchInfo Name="_TEXT_{DA810BDE-124D-4387-8009-A87B4FDF7909}">
         <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
           <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
           <Childs Count="5"/>
@@ -283,7 +283,7 @@ YII=</Image>
   <Loop Variable="{LoopFileName}" Items="{FileList({path_data}*)}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="10">
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="11">
       <Object>
-        <ObjectSearchInfo Name="Открыть файл данных_PUSHBUTTON_{CBBBE74E-D37B-41DA-96A0-171D49EF943E}">
+        <ObjectSearchInfo Name="Открыть файл данных_PUSHBUTTON_{5DA1C6B9-DBD0-43B4-9842-E38FB586701B}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -422,7 +422,7 @@ MRcBjLkIYMxFAGMuAhhzEcCYiwDGXAQw5iKAMRcBjLkIYMz1f4Hpz6Nl7culAAAAAElFTkSuQmCC</Im
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}{CTRL}A{/CTRL}{DEL}{LoopFileName}{ENTER}" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="12">
       <Object>
-        <ObjectSearchInfo Name="Имя файла:_TEXT_{78AD955B-6F68-46F2-8C85-DE199A7A61C5}">
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{A68E8D0D-C3C0-49E4-BDB6-4FE11D622905}">
           <Object Class="#32770" Name="Открыть" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Открыть">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -513,7 +513,7 @@ NP9S7tUO94pCw8CffVH/8YdVgoFt7D9rzyQQjWg7UQAAAABJRU5ErkJggg==</Image>
     <Pause PauseBefore="15000"/>
     <SearchUI Timeout="1000000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="14">
       <Object>
-        <ObjectSearchInfo Name="Компенсировать все_PUSHBUTTON_{7D88A015-0EAC-4B59-9844-40E107A45F76}">
+        <ObjectSearchInfo Name="Компенсировать все_PUSHBUTTON_{8B1A8D4C-9E2C-4CFC-81EC-17C5CA071814}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -674,7 +674,7 @@ Nq/j/wLSkie4yUaalgAAAABJRU5ErkJggg==</Image>
     <Pause PauseBefore="15000"/>
     <SearchUI Timeout="600000" Command="{MKEY RIGHT,CLICK}" PauseBefore="1000" PauseAfter="1200" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="16">
       <Object>
-        <ObjectSearchInfo Name="_CLIENT_{B7D675F0-B245-497D-98B1-83D2A65746AF}">
+        <ObjectSearchInfo Name="_CLIENT_{A43DD0DE-804F-49D9-8C0F-9D3F78DAFD62}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -770,7 +770,7 @@ nJBL/CjKn7gAAAAASUVORK5CYII=</Image>
     </SearchUI>
     <SearchUI Timeout="300000" Command="{MKEY LEFT,CLICK}" PauseAfter="1300" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="17">
       <Object>
-        <ObjectSearchInfo Name="копировать в буфер_MENUITEM_{A2865D16-4459-4661-A952-CC0D13E93B41}">
+        <ObjectSearchInfo Name="копировать в буфер_MENUITEM_{D56F4FC8-D400-4C0F-A2D8-807087F1C39F}">
           <Object Class="#32768" Name="Контекст" Role="WINDOW" State="FOCUSABLE">
             <RootRect Left="0" Top="0" Right="201" Bottom="28"/>
             <Childs Count="1"/>
@@ -837,7 +837,7 @@ AAAAAElFTkSuQmCC</Image>
     </SearchUI>
     <SearchUI Timeout="300000" Command="{CTRL}v{/CTRL}" PauseAfter="1200" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="18">
       <Object>
-        <ObjectSearchInfo Name="_CLIENT_{1A793908-A535-40D1-AAAF-D7B7B27C1088}">
+        <ObjectSearchInfo Name="_CLIENT_{E93DE4DE-8D9E-41FA-9361-FAE36ED181B4}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="MSPaintApp" Name="Безымянный - Paint" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Безымянный - Paint">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="3"/>
@@ -919,7 +919,7 @@ AElFTkSuQmCC</Image>
     <SendInput Timeout="20000" Command="{F12}" PauseAfter="500" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="19"/>
     <SearchUI Timeout="20000" Command="{MKEY LEFT,CLICK}" PauseAfter="1300" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="20">
       <Object>
-        <ObjectSearchInfo Name="Изображения_OUTLINEITEM_{672AC883-35B3-404C-8E62-E5DF00B30D45}">
+        <ObjectSearchInfo Name="Изображения_OUTLINEITEM_{5BC10705-6981-4068-9045-596162869D0F}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -1120,7 +1120,7 @@ uNvFIcA9Jwu6Tep2cQaws7OzvlMNDQ2m1c0DtnJZCuCe0P8DTV2JTSrn2OoAAAAASUVORK5CYII=</Im
     </SearchUI>
     <SearchUI Timeout="20000" Command="{MKEY LEFT,DBLCLICK}" PauseAfter="1000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="21">
       <Object>
-        <ObjectSearchInfo Name="Имя файла:_TEXT_{82DBC5F0-B5CB-45AF-8EA2-B6DFC726F345}">
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{D294F2E3-CB9D-491C-9D05-2AC4AB00D2EA}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -1217,7 +1217,7 @@ RU5ErkJggg==</Image>
     <SendInput Timeout="20000" Command="{CTRL}a{/CTRL}&#xA;{StrFileNameNoExt({LoopFileName})}&#xA;{ENTER}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="22"/>
     <SearchUI Timeout="20000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="23">
       <Object>
-        <ObjectSearchInfo Name="_TEXT_{E0F56491-B05A-4C3F-9F59-8FFC9E0B9CF8}">
+        <ObjectSearchInfo Name="_TEXT_{87A89CD2-637B-46E3-823B-93D7433AB25D}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -1347,7 +1347,7 @@ R/fufbTpXNQuGlUZuP4PFZJ+D4WA7fAAAAAASUVORK5CYII=</Image>
     <SendInput Command="{CTRL}c{/CTRL}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="25"/>
     <SearchUI Timeout="10000" Command="{MKEY LEFT,DBLCLICK}{SHIFT}{TAB}{TAB}{/SHIFT}{CTRL}v{/CTRL}" MinMatch="80" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="26">
       <Object>
-        <ObjectSearchInfo Name="_TEXT_{7A476913-7900-4CF4-9522-2AB896636AEA}">
+        <ObjectSearchInfo Name="_TEXT_{9B422A77-3406-45C4-930E-38797DB18650}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -1471,7 +1471,7 @@ sIJyF0ywBLuDgiMGBRcGVtEelLtgUm4l+H9IUfMfDACFwgAAAABJRU5ErkJggg==</Image>
     </SearchUI>
     <SearchUI Timeout="10000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="27">
       <Object>
-        <ObjectSearchInfo Name="Компенсировать текущий импульс_PUSHBUTTON_{E0F70384-0B8F-4770-A9C8-66BE0866678B}">
+        <ObjectSearchInfo Name="Компенсировать текущий импульс_PUSHBUTTON_{3B5BC506-6DC4-40C7-A83F-5F2D0B6E5CA0}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -1598,7 +1598,7 @@ I4cMRg4ZjBwyGDlkMHLIYOSQwcghg5Hzf/pjFqaJ/hL2AAAAAElFTkSuQmCC</Image>
     </SearchUI>
     <SearchUI Timeout="300000" Command="{MKEY RIGHT,CLICK}" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="28">
       <Object>
-        <ObjectSearchInfo Name="_CLIENT_{2C3CCBD0-0167-449D-B68B-7C79288E6B60}">
+        <ObjectSearchInfo Name="_CLIENT_{C8370A7F-6251-4239-8D5E-2901FF4750F5}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -1693,7 +1693,7 @@ DIO/iyYOBBMHgokDwcSBYOJAMHH+B7+/vVEg+N2AAAAAAElFTkSuQmCC</Image>
     </SearchUI>
     <SearchUI Timeout="300000" Command="{MKEY LEFT,CLICK}" PauseBefore="1000" PauseAfter="2000" MinMatch="70" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="29">
       <Object>
-        <ObjectSearchInfo Name="копировать в буфер_MENUITEM_{420804B5-1859-4A39-87CE-2D943FD10C49}">
+        <ObjectSearchInfo Name="копировать в буфер_MENUITEM_{1BB904BE-FD68-4397-8449-9446AC783B88}">
           <Object Class="#32768" Name="Контекст" Role="WINDOW" State="FOCUSABLE">
             <RootRect Left="0" Top="0" Right="201" Bottom="28"/>
             <Childs Count="1"/>
@@ -1758,7 +1758,7 @@ SUVORK5CYII=</Image>
     </SearchUI>
     <SearchUI Timeout="16000" Command="{MKEY LEFT,CLICK}" PauseAfter="2000">
       <Object>
-        <ObjectSearchInfo Name="_CLIENT_{D6E7A9C3-21F5-43AB-9EAD-DD4C6E265DA6}">
+        <ObjectSearchInfo Name="_CLIENT_{DF5DEDDC-DCA2-4D5E-9E7B-FDD0B42ADE75}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="MSPaintApp" Name="Безымянный - Paint" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Безымянный - Paint">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="3"/>
@@ -1846,7 +1846,7 @@ yCHByPkfz6d4Abw3LNsAAAAASUVORK5CYII=</Image>
     <SendInput Timeout="30000" Command="{F12}" PauseAfter="1300" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="31"/>
     <SearchUI Timeout="50000" Command="{MKEY LEFT,CLICK}" PauseBefore="1000" PauseAfter="2100" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="32">
       <Object>
-        <ObjectSearchInfo Name="Изображения_OUTLINEITEM_{91C661C8-C1DC-4631-B49B-2723C78DC93F}">
+        <ObjectSearchInfo Name="Изображения_OUTLINEITEM_{1279DAD0-9F98-4FC2-80B9-9ED28F8C3B62}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -2042,7 +2042,7 @@ WBeNQTHMW6eYpCQ4F6r3YENPQE4YlJst+jRAa9sewDyKd8AdJwt6m8SjeAbs4mLyuel9D0wEjEn0
     </SearchUI>
     <SearchUI Timeout="300000" Command="{MKEY LEFT,CLICK}{RIGHT}_stong_pulse{ENTER}" PauseBefore="2000" PauseAfter="1200" MinMatch="90" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="33">
       <Object>
-        <ObjectSearchInfo Name="Имя файла:_TEXT_{2B697E4D-766F-431F-9123-733A94623D81}">
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{94CBE482-C013-42B4-A46A-5E2A1D4BED1C}">
           <Object Module="mspaint.exe" ModuleSize="6376960" Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -2137,7 +2137,7 @@ RU5ErkJggg==</Image>
     </SearchUI>
     <SearchUI Command="{MKEY LEFT,CLICK}" PauseBefore="1000">
       <Object>
-        <ObjectSearchInfo Name="_TITLEBAR_{4A6A31C1-5C56-4611-ADF7-BBE6F7D31E6A}">
+        <ObjectSearchInfo Name="_TITLEBAR_{F5C0A0C6-AC38-490B-841D-0F3B64CF0FE0}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -2224,7 +2224,7 @@ RU5ErkJggg==</Image>
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="35">
       <Object>
-        <ObjectSearchInfo Name="File_MENUITEM_{AF14D5A0-DAAC-40F9-9911-FEDFBB9E20AF}">
+        <ObjectSearchInfo Name="File_MENUITEM_{57DD70E0-4AAD-4BCB-959F-1D0CEB619D73}">
           <Object Class="TForm1" Name="Компенсация дисперсии. Версия 3.0" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Компенсация дисперсии. Версия 3.0">
             <RootRect Left="0" Top="0" Right="1382" Bottom="744"/>
             <Childs Count="5"/>
@@ -2349,7 +2349,7 @@ BGDOJQBzLgGYcwnAnEsA5lz/CyTcfFhoN2qXAAAAAElFTkSuQmCC</Image>
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="36">
       <Object>
-        <ObjectSearchInfo Name="Записать профили в файл_MENUITEM_{073CE3F2-F274-4C79-A341-17CC0C5F5DE1}">
+        <ObjectSearchInfo Name="Записать профили в файл_MENUITEM_{AB9E6827-4496-4C08-95F3-6581008EC696}">
           <Object Class="#32768" Name="File" Role="WINDOW" State="FOCUSABLE">
             <RootRect Left="0" Top="0" Right="311" Bottom="72"/>
             <Childs Count="1"/>
@@ -2519,7 +2519,7 @@ YII=</Image>
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="37">
       <Object>
-        <ObjectSearchInfo Name="Записать_PUSHBUTTON_{2C43B1F1-0C0C-45E4-96CC-3AB10243ED23}">
+        <ObjectSearchInfo Name="Записать_PUSHBUTTON_{A7239396-EA13-4C1D-8FCC-91DC82F358F7}">
           <Object Class="TForm_profiles" Name="Запись профилей на диск" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Запись профилей на диск">
             <RootRect Left="0" Top="0" Right="501" Bottom="222"/>
             <Childs Count="3"/>
@@ -2648,7 +2648,7 @@ gA0uDtjg4oANLg7Y4Po/uACaJM1dQNAAAAAASUVORK5CYII=</Image>
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="38">
       <Object>
-        <ObjectSearchInfo Name="Компьютер_OUTLINEITEM_{1564B753-154D-4918-A3D1-ACBBA32977C1}">
+        <ObjectSearchInfo Name="Компьютер_OUTLINEITEM_{E2BF3B95-A3E9-4CD0-B978-766E66EE548A}">
           <Object Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -2845,7 +2845,7 @@ Z2VGNACzC0T3BNEAPHIkdv060+VnZUZWA/5/dT0726lw/JQAAAAASUVORK5CYII=</Image>
     </SearchUI>
     <SearchUI Timeout="30000" Command="{MKEY LEFT,CLICK}" PauseBefore="2000" PauseAfter="2000" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="39">
       <Object>
-        <ObjectSearchInfo Name="Имя файла:_TEXT_{31EE7BAB-815A-48EF-ADC9-BA86605F9C13}">
+        <ObjectSearchInfo Name="Имя файла:_TEXT_{2E991AD2-63EC-47FD-AC5A-8902EE95B8A5}">
           <Object Class="#32770" Name="Сохранить как" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Сохранить как">
             <RootRect Left="0" Top="0" Right="683" Bottom="480"/>
             <Childs Count="3"/>
@@ -2973,7 +2973,7 @@ YII=</Image>
     <Pause PauseBefore="18000"/>
     <SearchUI Timeout="600000" Command="{MKEY LEFT,CLICK}" FailureGoto="Ошибка" FailureVarName="{error}" FailureVarValue="43">
       <Object>
-        <ObjectSearchInfo Name="Выход_PUSHBUTTON_{B155290A-4FE6-4FB1-B138-8900A3830135}">
+        <ObjectSearchInfo Name="Выход_PUSHBUTTON_{345CFF84-E772-4D67-869F-4AD829F8A553}">
           <Object Class="TForm_profiles" Name="Запись профилей на диск" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Запись профилей на диск">
             <RootRect Left="0" Top="0" Right="501" Bottom="222"/>
             <Childs Count="3"/>
@@ -3077,7 +3077,6 @@ mpvdjmcAAAAASUVORK5CYII=</Image>
   </If>
   <ShellCommand Timeout="100000" Command="run" Mode="show" Object="C:\Users\admin\Music\1.mp3"/>
   <Pause PauseBefore="4000"/>
-  <SendInput Command="{ALT}{F4}{/ALT}"/>
   <Goto GotoLabel="EXIT_TASK"/>
   <TaskLabel Label="Ошибка"/>
   <ShellCommand Command="run" Mode="show" Object="C:\Users\admin\Music\2.mp3"/>
