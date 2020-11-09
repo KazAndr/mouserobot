@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <!--Включение Far и Phase-->
+  <Dialog DialogCaption="Введение даты начала наблюдений" DialogText="обратите внимание, что разделителем по умолчанию является пробел (SPACE)" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Дата" Variable="{data}" Type="Text"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <ShellCommand Command="run" Mode="show" Object="C:\Documents and Settings\All Users\Главное меню\Программы\Far Manager 3\Far Manager 3.lnk"/>
+  <SendInput Command="{LEFT}{ENTER}{LEFT}{ENTER}&#xA;{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}&#xA;{DOWN}{DOWN}{DOWN}{ENTER}&#xA;{DOWN}{ENTER}&#xA;phasef.exe{ENTER}"/>
+  <SendInput Command="1{ENTER}&#xA;3{ENTER}&#xA;{data}{ENTER}"/>
+  <!--Начало ввода пульсарных данных-->
+  <SetVariable Variable="{names_list}" Value="{StringList(&#xA;&quot;0138+59 552&quot;,&#xA;&quot;0320+39 987&quot;,&#xA;&quot;0355+54 100&quot;, &#xA;&quot;0357+3205 100&quot;,&#xA;&quot;0823+2637 123&quot;,&#xA;&quot;0834+06 424&quot;,&#xA;&quot;1541+09 317&quot;,&#xA;&quot;1642-03 192&quot;,&#xA;&quot;1737+13 258&quot;,&#xA;&quot;1821+05 100&quot;,&#xA;&quot;1822-09 100&quot;,&#xA;&quot;1839+56 762&quot;,&#xA;&quot;1919+21 100&quot;,&#xA;&quot;2016+28 431&quot;,&#xA;&quot;2020+28 254&quot;,&#xA;&quot;2110+27 -332&quot;,&#xA;&quot;2151+2315 100&quot;,&#xA;&quot;2224+65 -418&quot;,&#xA;&quot;2227+3031 100&quot;,&#xA;&quot;2303+30 100&quot;,&#xA;&quot;2315+21 100&quot;,&#xA;&quot;2340+08 100&quot;)}"/>
+  <Loop Variable="{item}" Items="{names_list}">
+    <SetVariable Variable="{splited_item}" Value="{Split({item})}"/>
+    <SetVariable Variable="{counter_var}" Value="0"/>
+    <Loop Variable="{item}" Items="{splited_item}">
+      <If V1="{counter_var}" Expr="equal" V2="0" CompareAs="text">
+        <Then>
+          <SetVariable Variable="{name}" Value="{item}"/>
+          <SetVariable Variable="{counter_var}" Value="1"/>
+        </Then>
+        <Else>
+          <SetVariable Variable="{location}" Value="{item}"/>
+        </Else>
+      </If>
+    </Loop>
+    <SendInput Command="{name}{ENTER}"/>
+    <SendInput Command="{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}"/>
+    <SendInput Command="{F10}{location}{ENTER}{DOWN}"/>
+    <SendInput Command="й"/>
+    <SendInput Command="й"/>
+  </Loop>
+  <SendInput Command="{SPACE}{ENTER}&#xA;&#xA;"/>
+</Task>

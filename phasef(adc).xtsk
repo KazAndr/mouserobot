@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <!--Включение Far и Phase-->
+  <Dialog DialogCaption="Введение даты начала наблюдений" DialogText="обратите внимание, что разделителем по умолчанию является пробел (SPACE)" DefaultOkButton="idOK">
+    <Field Id="idField1" Caption="Дата" Variable="{data}" Type="Text"/>
+    <Button Id="idOK" Caption="OK"/>
+  </Dialog>
+  <ShellCommand Command="run" Mode="show" Object="C:\Documents and Settings\All Users\Главное меню\Программы\Far Manager 3\Far Manager 3.lnk"/>
+  <SendInput Command="{LEFT}{ENTER}{LEFT}{ENTER}&#xA;{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{ENTER}&#xA;{DOWN}{DOWN}{DOWN}{ENTER}&#xA;{DOWN}{ENTER}&#xA;phasef.exe{ENTER}"/>
+  <SendInput Command="1{ENTER}&#xA;3{ENTER}&#xA;{data}{ENTER}"/>
+  <!--Начало ввода пульсарных данных-->
+  <SetVariable Variable="{names_list}" Value="{StringList(&#xA;&quot;0007+73&quot;,&#xA;&quot;0158+21&quot;,&#xA;&quot;0244+14&quot;, &#xA;&quot;0417+35&quot;,&#xA;&quot;0457+23&quot;,&#xA;&quot;0611+30&quot;,&#xA;&quot;0622+37&quot;,&#xA;&quot;1836+59&quot;,&#xA;&quot;1957+5033&quot;,&#xA;&quot;1836+5925&quot;,&#xA;&quot;1957+5033&quot;,&#xA;&quot;2030+3611&quot;,&#xA;&quot;2032+4127&quot;,&#xA;&quot;2055+2539&quot;)}"/>
+  <SetVariable Variable="{counter_mode}" Value="0"/>
+  <SetVariable Variable="{location}" Value="100"/>
+  <Loop Variable="{pulsar}" Items="{names_list}">
+    <If V1="{counter_mode}" Expr="equal" V2="0" CompareAs="text">
+      <Then>
+        <!--Работа с первым пульсаром в группе-->
+        <SendInput Command="{pulsar}{ENTER}"/>
+        <SendInput Command="{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}"/>
+        <SendInput Command="{F10}{location}{ENTER}{DOWN}"/>
+        <SendInput Command="{DOWN}{DOWN}{DOWN}"/>
+        <SendInput Command="{F10}100{ENTER}{DOWN}"/>
+        <SendInput Command="й"/>
+        <SendInput Command="{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}&#xA;{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}&#xA;{DOWN}"/>
+        <SendInput Command="{F10}фвс{ENTER}{DOWN}"/>
+        <SendInput Command="{F10}фвс{ENTER}{DOWN}"/>
+        <SendInput Command="й"/>
+        <SetVariable Variable="{counter_mode}" Value="1"/>
+      </Then>
+      <Else>
+        <!--Работа с остальными пульсарами в группе-->
+        <SendInput Command="{pulsar}{ENTER}"/>
+        <SendInput Command="{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}{DOWN}"/>
+        <SendInput Command="{F10}{location}{ENTER}{DOWN}"/>
+        <SendInput Command="й"/>
+        <SendInput Command="й"/>
+      </Else>
+    </If>
+  </Loop>
+  <SendInput Command="{SPACE}{ENTER}&#xA;&#xA;"/>
+</Task>

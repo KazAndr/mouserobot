@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://automationbox.com/sh/xtsk/v1" MinMatch="70">
+  <ShellCommand Command="run" Mode="show maximized" Object="C:\Documents and Settings\Администратор\Рабочий стол\BSAII\TaskBSA2.exe"/>
+  <Pause PauseBefore="5000"/>
+  <SetVariable Variable="{names_list}" Value="{StringList(&#xA;&quot;p0007_73.psr&quot;,&#xA;&quot;p0158_21.psr&quot;,&#xA;&quot;p0244_14.psr&quot;,&#xA;&quot;p0417_35.psr&quot;,&#xA;&quot;p0457_23.psr&quot;,&#xA;&quot;p0611_30.psr&quot;,&#xA;&quot;p0622_37.psr&quot;,&#xA;&quot;p1836_59.psr&quot;,&#xA;&quot;p1957_50.psr&quot;,&#xA;&quot;p2030_36.psr&quot;,&#xA;&quot;p2032_41.psr&quot;,&#xA;&quot;p2055_25.psr&quot;&#xA;)}"/>
+  <Loop Variable="{name}" Items="{names_list}">
+    <SearchUI Command="{MKEY LEFT,CLICK}">
+      <Object>
+        <ObjectSearchInfo Name="Открыть файл задания_PUSHBUTTON_{6911786A-910E-4B2B-AC43-AE09448553D9}">
+          <Object Module="TaskBSA2.exe" ModuleSize="48128" Class="WindowsForms10.Window.8.app.0.2bf8098_r16_ad1" Name="Формирование файлов заданий" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Формирование файлов заданий">
+            <RootRect Left="0" Top="0" Right="1288" Bottom="1002"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="4" Top="30" Right="1284" Bottom="998"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Формирование файлов заданий" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="29" Top="4" Right="1284" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="23"/>
+          </Object>
+          <Object Name="Исходный" Role="WINDOW" Text="Исходный">
+            <RootRect Left="11" Top="35" Right="267" Bottom="991"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="WindowsForms10.EDIT.app.0.2bf8098_r16_ad1" Name="" Role="WINDOW" Text="">
+                <RootRect Left="273" Top="289" Right="545" Bottom="923"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="GROUPING">
+            <RootRect Left="11" Top="35" Right="267" Bottom="991"/>
+            <Childs Count="18"/>
+          </Object>
+          <Object Class="WindowsForms10.BUTTON.app.0.2bf8098_r16_ad1" Name="Открыть файл задания" Role="WINDOW" Text="Открыть файл задания">
+            <RootRect Left="18" Top="260" Right="254" Bottom="283"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="WindowsForms10.EDIT.app.0.2bf8098_r16_ad1" Name="Имя файла" Role="WINDOW" Text="Дисперсия">
+                <RootRect Left="19" Top="234" Right="148" Bottom="254"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="WindowsForms10.EDIT.app.0.2bf8098_r16_ad1" Name="" Role="WINDOW" Text="">
+                <RootRect Left="19" Top="289" Right="254" Bottom="985"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PUSHBUTTON" DefaultAction="Нажать">
+            <InnerPoint X="104" Y="13"/>
+            <RootRect Left="18" Top="260" Right="254" Bottom="283"/>
+            <Image>iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAFoklEQVR42u2du5IUNxSGJbvKwcJe
+MBeHTgl5AB7Br0JGjlM/gSP7IcjgDYhICQic2FWwi7031mu8rvUUXSXOHF1ao+6WRv/+X7AlqdU6
+Z/qjZ3q6Tg/2+vraCKy1q5Hhr1lHDqoJ/iZ/ndgc0y0//vryyQ/fj067993Do3dvgl3XXjWGkVVX
+zXfT/PHYarIbPej+0S8QLDelBfcoe0bBsutPkP8Ogu4Tq1nXj2lwE1ZdNVnitm6kU+3VF2WCzfr5
+GpypJqQtunbw/O7vvNkeMgW3hYLLoWBwKBgcCganD8HPfnnROoeO6UCwf21NkKBgcCgYHAoGh4LB
+oWBw+DVpEh18TeKNjmL6uNFBwcVQMDgUDA4FgzMqWJZbmFDFRQUouJwcwbFqrGpQcDndCI4VUAYL
+59wcuUmOZM4BKMkrFhyrqVONRHllLIS/+BdtSkZMcMGIDD/XOttA2WdwrC7a+QsWybpNRnyWq25w
+F12kHixb31S5i+efwW4d+cpjsdSc1kJLBAdLWWVX2VIj8oxX/wKC57QfMVWknlBupp2L6Schennu
+oVhwbDB4BqdP7qmCzfqn5qKCR2O1Fjq/4NG3aLP+xr6RYP0WvaZ9sYssk/1Wb+AusuT40Kh0kZX/
+krbzTGoF4J0sCpYACiYSCgaHgsHpQzBLdqbQgWAW3WFDweBQMDgUDA4Fg0PB4PBr0iQ6+JrEGx3F
+9HGjg4KLoWBwKBgcCganoKKjfmk0BZdDweBk1kUnypgrYP1KOeOVz015ZCG2IwATBfuld27HRLG0
+WtyM1dPP/BBDjw8oFJP5Fp3/1ELsR6FNvDx2dMHUz7HLAKPy5LhJPgzR2stsTBQsZ8YEx37vOyFY
+PQaR9Xv7cjxnTvDJl4EbKNiMnXBqssk4p9Ol1GtnsJn7Ldp4n8eJ/weia+YSnFPmniPYhB6DsDkX
+R7M/F4rBxK9JG11kxQbdpuhFVv4RB9MznXnvZOV/Rd7ouXIKLqeV4I2gs3J4LxocCganD8Es2ZlC
+B4JZdIcNBYNDweBQMDgUDA4Fg2N/e/uqdQ5bytWnf1qnMAPWPH7aOgeyIPb6+HXrHMiC2P/e/NQ6
+B7Ig9urq39Y5kAWxnyAuJUgMe3l50ToHsiD24uKsWrCdnV3Xrhn3JrMSfFon0s7OnoylutvMkGpH
+CUvsx48ndSLdurUvY6luKzLT2JJsC7Dn58d1It2+fSBjDd3VXzlnGBmmyYac4C+l5vhLxfJR89W4
+H0u11Y6x8YIRP2gwDf/I+Nizs79mdxlkd/eOjCW7fjt/q5oT2zGWTHDH0Uxie6WjqwWD6cWC5h8i
+X/CftQR/K2PJrmqv/qZnDnMGhk1ujr+UnOavGWzIvdR4IpxcXEZMLJiYIxcMphE7gFrw6emHOoL3
+9u7KWLLrtzfd6kbSO/rRVSO2ciyKWtZ/vTmp5r9AfwUXLpaGPTmpJHh//66MJbvBtt9w7cTI6LIy
+AdlNxPK3BsMVp5q5V34aSvBRHcGf87gnDuiRHHddv+3vFRxRjUQ4lZLapPYK5hPMVu0eTMMn+Ipy
+gqbTcNjj48P5Tc7KwcH95ZJcdPHRcBWirwS/r/bySg/Kg+1PcmuxR4d/tM6BLIi9fP6oRdjWr/vG
+YH//uXUKZElYkwWOvfy70r3o7vjq629apzADrIsGh4LBoWBwKBgcCgaHgsHhb3SAw1/ZAYeCwaFg
+cCgYHAoGh4LBoWBwKBgcCgaHgsGhYHAoGBwKBoeCwaFgcCgYHAoGh4LBoWBwKBgcCgaHgsGhYHAo
+GBwKBoeCwaFgcCgYHAoGh4LBoWBwKBgcCgaHgsGhYHAoGBwKBoeCwaFgcCgYHAoGh4LBoWBwKBgc
+CgaHgsGhYHAoGBwKBoeCwaFgcCgYHAoGh4LBoWBwKBgcCgaHgsGhYHAoGBwKBoeCwaFgcP4H1o/p
+T3KxsqEAAAAASUVORK5CYII=</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <Pause PauseBefore="2000"/>
+    <SendInput Command="{name}{ENTER}"/>
+    <SearchUI Command="{MKEY LEFT,CLICK}{DOWN}{DOWN}">
+      <Object>
+        <ObjectSearchInfo Name="Окно 383.3856 мс_TEXT_{8F5A3DEA-F5F4-4036-AF21-6947638D9F0A}">
+          <Object Module="TaskBSA2.exe" ModuleSize="48128" Class="WindowsForms10.Window.8.app.0.2bf8098_r16_ad1" Name="Формирование файлов заданий" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Формирование файлов заданий">
+            <RootRect Left="0" Top="0" Right="1288" Bottom="1002"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="CLIENT">
+            <RootRect Left="4" Top="30" Right="1284" Bottom="998"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Формирование файлов заданий" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="29" Top="4" Right="1284" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="23"/>
+          </Object>
+          <Object Class="WindowsForms10.COMBOBOX.app.0.2bf8098_r16_ad1" Name="Окно 383.3856 мс" Role="WINDOW" Text="no">
+            <RootRect Left="469" Top="107" Right="528" Bottom="128"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="WindowsForms10.STATIC.app.0.2bf8098_r16_ad1" Name="Точек в окне" Role="WINDOW" Text="Точек в окне">
+                <RootRect Left="339" Top="110" Right="412" Bottom="123"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="WindowsForms10.STATIC.app.0.2bf8098_r16_ad1" Name="Режим суммир-я" Role="WINDOW" Text="Режим суммир-я">
+                <RootRect Left="452" Top="91" Right="545" Bottom="104"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="WindowsForms10.msctls_progress32.app.0.2bf8098_r16_ad1" Name="" Role="WINDOW" Text="">
+                <RootRect Left="404" Top="133" Right="545" Bottom="150"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="COMBOBOX" Value="no">
+            <RootRect Left="469" Top="107" Right="528" Bottom="128"/>
+            <Childs Count="2"/>
+          </Object>
+          <Object Class="Edit" Role="WINDOW">
+            <RootRect Left="472" Top="110" Right="508" Bottom="125"/>
+            <Neigbours>
+              <Right Module="" ModuleSize="0" Class="" Name="открыт" Role="PUSHBUTTON" Text="" DefaultAction="открыт" ShortCut="Alt+Стрелка вниз" ParentId="2">
+                <RootRect Left="510" Top="108" Right="527" Bottom="127"/>
+              </Right>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="TEXT" Value="no">
+            <InnerPoint X="17" Y="5"/>
+            <RootRect Left="472" Top="110" Right="508" Bottom="125"/>
+            <Image>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
+AElFTkSuQmCC</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SearchUI Command="{MKEY LEFT,CLICK}">
+      <Object>
+        <ObjectSearchInfo Name="Записать в файл_PUSHBUTTON_{9BC2E78F-039F-46CB-9BDD-A514BFD3E7C2}">
+          <Object Module="TaskBSA2.exe" ModuleSize="48128" Class="WindowsForms10.Window.8.app.0.2bf8098_r16_ad1" Name="Формирование файлов заданий" Role="WINDOW" State="SIZEABLE;MOVEABLE;FOCUSABLE" Text="Формирование файлов заданий">
+            <RootRect Left="0" Top="0" Right="1288" Bottom="1002"/>
+            <Childs Count="3"/>
+          </Object>
+          <Object Role="CLIENT" State="FOCUSABLE">
+            <RootRect Left="4" Top="30" Right="1284" Bottom="998"/>
+            <Neigbours>
+              <Top Module="" ModuleSize="0" Class="" Name="" Role="TITLEBAR" State="FOCUSABLE" Text="" Value="Формирование файлов заданий" Description="Выводит заголовок окна и элементы управления окном">
+                <RootRect Left="29" Top="4" Right="1284" Bottom="30"/>
+              </Top>
+            </Neigbours>
+            <Childs Count="23"/>
+          </Object>
+          <Object Class="WindowsForms10.BUTTON.app.0.2bf8098_r16_ad1" Name="Записать в файл" Role="WINDOW" Text="Записать в файл">
+            <RootRect Left="297" Top="260" Right="528" Bottom="283"/>
+            <Neigbours>
+              <Left Module="" ModuleSize="0" Class="" Name="Исходный" Role="WINDOW" Text="Исходный">
+                <RootRect Left="11" Top="35" Right="267" Bottom="991"/>
+              </Left>
+              <Top Module="" ModuleSize="0" Class="" Name="Управление ГШ" Role="WINDOW" Text="Управление ГШ">
+                <RootRect Left="277" Top="156" Right="545" Bottom="254"/>
+              </Top>
+              <Bottom Module="" ModuleSize="0" Class="WindowsForms10.EDIT.app.0.2bf8098_r16_ad1" Name="" Role="WINDOW" Text="">
+                <RootRect Left="273" Top="289" Right="545" Bottom="923"/>
+              </Bottom>
+            </Neigbours>
+            <Childs Count="1"/>
+          </Object>
+          <Object Role="PUSHBUTTON" DefaultAction="Нажать">
+            <InnerPoint X="108" Y="7"/>
+            <RootRect Left="297" Top="260" Right="528" Bottom="283"/>
+            <Image>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</Image>
+          </Object>
+        </ObjectSearchInfo>
+      </Object>
+    </SearchUI>
+    <SendInput Command="{ENTER}{ENTER}"/>
+  </Loop>
+  <Pause PauseBefore="3000"/>
+  <SendInput Command="{ALT}{F4}{/ALT}"/>
+</Task>
